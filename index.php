@@ -12,7 +12,7 @@
                     checked>
                 <label for="employee">employee</label>
                 <input type="radio" id="dpendent" name="dependent" value="dependent"
-                    checked>
+                    unchecked>
                 <label for="dependent">dependent</label>
             </form> 
         </div> 
@@ -20,8 +20,8 @@
             <button>+</button>
         </div>
 
-    <div class = "calculate">
-        <button>calculate</button>
-    </div> 
+        <div class = "calculate">
+            <button>calculate</button>
+        </div> 
     </body>
 </html>
