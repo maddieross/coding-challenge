@@ -1,6 +1,6 @@
 $(function () {
-    
-    $original = $('.user-input').clone(true);
+    var duplicates = 0,
+     $original = $('.user-input').clone(true);
     
     function DuplicateForm () {
         var newForm;
