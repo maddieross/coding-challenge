@@ -8,10 +8,10 @@
         <div class = "user-input">
             <form method="post" action="input_handler.php">
                 <input type="text" id="name" name="name" placeholder="name">
-                <input type="radio" id="employee" name="employee" value="employee"
+                <input type="radio" id="employee" name="employee-dependent" value="employee"
                     checked>
                 <label for="employee">employee</label>
-                <input type="radio" id="dpendent" name="dependent" value="dependent">
+                <input type="radio" id="dpendent" name="employee-dependent" value="dependent">
                 <label for="dependent">dependent</label>
             </form> 
         </div> 
