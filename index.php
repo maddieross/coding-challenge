@@ -28,8 +28,7 @@
         <?php
             if(isset($_POST['duplicates']))
             {
-                $duplicates = $_POST['duplicates'];
-                echo $duplicates; 
+                echo $_POST['duplicates'];  
             }
         ?>
 
