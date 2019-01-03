@@ -9,10 +9,10 @@
             <input type="text" id="name" name="name" placeholder="name">
             <input type="radio" id="employee" name="employee" value="employee"
                 checked>
-            <label for="employee">Huey</label>
+            <label for="employee">employee</label>
             <input type="radio" id="dpendent" name="dependent" value="dependent"
                 checked>
-            <label for="dependent">Huey</label>
+            <label for="dependent">dependent</label>
         </form> 
     </body>
 </html>
