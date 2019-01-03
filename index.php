@@ -11,8 +11,7 @@
                 <input type="radio" id="employee" name="employee" value="employee"
                     checked>
                 <label for="employee">employee</label>
-                <input type="radio" id="dpendent" name="dependent" value="dependent"
-                    unchecked>
+                <input type="radio" id="dpendent" name="dependent" value="dependent">
                 <label for="dependent">dependent</label>
             </form> 
         </div> 
