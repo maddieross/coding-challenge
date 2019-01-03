@@ -1,4 +1,4 @@
-$(function () {
+$(document).ready(function () {
     var duplicates = 0,
      $original = $('.user-input').clone(true);
     
@@ -18,10 +18,13 @@ $(function () {
         e.preventDefault();
         DuplicateForm();
     });
-});
 
-$.ajax({
-    url: "index.php",
-    method: "POST",
-    data: { "duplicates": duplicates }
-  });
+    $('.calculate').on('click', function (e){
+        $.ajax({
+            type: "POST",
+            url: 'index.php',
+            data: {duplicates : duplicates}
+        })
+    });
+
+});
