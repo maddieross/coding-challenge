@@ -18,11 +18,10 @@ $(function () {
         e.preventDefault();
         DuplicateForm();
     });
-
-    $.ajax({
-        url: "index.php",
-        method: "POST",
-        data: { "duplicates": duplicates }
-      });
-
 });
+
+$.ajax({
+    url: "index.php",
+    method: "POST",
+    data: { "duplicates": duplicates }
+  });
