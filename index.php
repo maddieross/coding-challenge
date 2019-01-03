@@ -26,8 +26,10 @@
         </div> 
 
         <?php
-            $numberOfForms = (isset($_POST['duplicates'])) ? $_POST['duplicates'] : 0;
-            echo $numberOfForms; 
+            if(isset($_POST['duplicates']))
+            {
+                echo $numberOfForms;
+            }   
         ?>
     </body>
 </html>
