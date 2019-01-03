@@ -26,8 +26,11 @@
         </div> 
 
         <?php
-            $duplicates = $_POST['duplicates'];
-            echo($duplicates);
+            if(isset($_POST['duplicates']))
+            {
+                $duplicates = $_POST['duplicates'];
+                echo $duplicates; 
+            }
         ?>
 
 
