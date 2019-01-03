@@ -14,7 +14,7 @@ $(function () {
         });
     }
     
-    $$(".add").click(function(){
+    $$(''.add').click(function(){
         e.preventDefault();
         DuplicateForm();
     });
