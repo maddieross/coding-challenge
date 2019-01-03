@@ -24,5 +24,12 @@
         <div class = "calculate">
             <button>calculate</button>
         </div> 
+
+        <?php
+            $duplicates = $_POST['duplicates'];
+            echo($duplicates);
+        ?>
+
+
     </body>
 </html>
