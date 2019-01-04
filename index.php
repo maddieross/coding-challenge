@@ -1,9 +1,7 @@
 <?php
-require_once 'Dao.php';
-echo 'require once'; 
+require_once 'Dao.php'; 
 $dao = new Dao(); 
 $connection = $dao->getConnection();
-echo $connection; 
 ?>
 <html>
     <link href="index.css" type="text/css" rel="stylesheet" />
