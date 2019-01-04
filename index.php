@@ -1,5 +1,6 @@
 <?php
 require_once 'Dao.php';
+echo 'require once'; 
 $dao = new Dao(); 
 $connection = $dao->getConnection();
 echo $connection; 
