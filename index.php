@@ -22,15 +22,9 @@
         </div>
 
         <div class = "calculate">
-            <button>calculate</button>
+            <form method="post" action="input_handler.php">
+            <input type="calculate" value="calculate">
         </div> 
 
-        <?php
-            if(isset($_POST['duplicate']))
-            {
-                $numberOfEntrys = $_POST['duplicate']; 
-                echo $numberOfEntrys;
-            }   
-        ?>
     </body>
 </html>

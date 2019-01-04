@@ -23,7 +23,7 @@ $(document).ready(function () {
         var duplcate = $(this).attr('duplicates')
         $.ajax({
             type: "POST",
-            url: 'index.php',
+            url: 'calculateHandler.php',
             data: {duplicate : duplicate }
         });
     });
