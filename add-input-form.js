@@ -20,10 +20,11 @@ $(document).ready(function () {
     });
 
     $('.calculate').on('click', function (e){
+        var duplcate = $(this).attr('duplicates')
         $.ajax({
             type: "POST",
             url: 'index.php',
-            data: {duplicates : duplicates }
+            data: {duplicate : duplicate }
         });
     });
 });
