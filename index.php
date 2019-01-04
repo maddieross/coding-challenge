@@ -23,7 +23,7 @@
 
         <div class = "calculate">
             <form method="post" action="input_handler.php">
-            <input type="calculate" value="calculate">
+            <input type="submit" value="calculate">
         </div> 
 
     </body>
