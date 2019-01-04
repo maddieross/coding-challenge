@@ -12,6 +12,7 @@ $(document).ready(function () {
         $.each($('input', newForm), function(i, item) {            
             $(item).attr('name', $(item).attr('name') + duplicates);
         });
+
     }
     
     $('.add').on('click', function (e){
@@ -20,8 +21,7 @@ $(document).ready(function () {
         $.ajax({
             type: "POST",
             url: 'input_handler.php',
-            data: {duplicate : duplicate }
+            data: {duplicates : duplicates }
         });
     });
-
 });
