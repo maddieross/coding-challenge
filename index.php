@@ -1,7 +1,7 @@
 <?php
 require_once 'Dao.php'; 
 $dao = new Dao(); 
-
+echo 'worling!';
 ?>
 <html>
     <link href="index.css" type="text/css" rel="stylesheet" />
