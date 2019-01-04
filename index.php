@@ -1,8 +1,8 @@
 <?php
 require_once 'Dao.php'; 
 $dao = new Dao(); 
-$connection = $dao->getConnection; 
-echo $connnection;
+$connection = $dao->getConnection(); 
+
 ?>
 <html>
     <link href="index.css" type="text/css" rel="stylesheet" />
