@@ -4,3 +4,4 @@
         $numOfForms = $_POST['duplicates']; 
         echo $numOfForms; 
     }
+?>
