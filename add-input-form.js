@@ -18,14 +18,18 @@ $(document).ready(function () {
     $('.add').on('click', function (e){
         e.preventDefault();
         DuplicateForm();
+    });
+
+    $('.calculate').on('click', function (e){
         $.ajax({
             type: "POST",
             url: 'input_handler.php',
-            data: {duplicates : duplicates }, 
+            data: {duplicates : duplicates},
             success: function(data)
             {
-                alert("success!");
+                alert(duplicates); 
             }
-        });
-    });
+        }); 
+    }); 
+
 });
