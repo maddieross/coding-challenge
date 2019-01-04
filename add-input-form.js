@@ -17,14 +17,11 @@ $(document).ready(function () {
     $('.add').on('click', function (e){
         e.preventDefault();
         DuplicateForm();
-    });
-
-    $('.calculate').on('click', function (e){
-        var duplcate = $(this).attr('duplicates')
         $.ajax({
             type: "POST",
             url: 'input_handler.php',
             data: {duplicate : duplicate }
         });
     });
+
 });
