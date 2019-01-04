@@ -1,6 +1,6 @@
 <?php 
-    if(isset($_POST['duplicate']))
+    if(isset($_POST['duplicates']))
     {
-        $numOfForms = $_POST['duplicate']; 
+        $numOfForms = $_POST['duplicates']; 
         echo $numOfForms; 
     }
