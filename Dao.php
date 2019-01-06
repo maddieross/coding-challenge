@@ -32,13 +32,9 @@ class Dao {
         $user_ID = $this->createUserID(); 
         $conn = $this->getConnection();
         $query = $conn->prepare("INSERT INTO users (userID, userName, email, pw) VALUES ('$user_ID', '$name', '$email', '$password')");
-        echo 'q';
         $query->execute();
-        echo 'f';
-        $result = $query->fetch();
-        echo 'end';
         //$this_>createEmployeeTable($user_ID); 
-        return $result; 
+        return 1; 
     } 
   }
 
