@@ -1,16 +1,42 @@
 <?php
-require_once 'Dao.php'; 
-$dao = new Dao(); 
-$connection = $dao->getConnection(); 
-
-?>
+    session_start();
+ ?>
 <html>
     <link href="index.css" type="text/css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script type="text/javascript" src="add-input-form.js"></script>
     <header><title>Paylocity Coding Challenge</title></header>
     <h1><a href="index.php">Coding Challenge</a></h1> 
     <body>
-
-    </body>
+        <?php
+            if (isset($_SESSION['messages'])) {
+            echo $_SESSION['messages'];
+            }
+            unset($_SESSION['messages']);
+        ?>
+        
+        <div class="login">
+            <form method="post" action="login_handler.php">
+                <label for="login">Login:</label><br>
+                <input type="text" id="login" name="login" placeholder="you@example.com"><br>
+                <label for="login">Password:</label><br>
+                    <input type="password" id="password" name="password" placeholder="password">
+                <input type="submit" value="Login">
+            </form> 
+        </div> 
+        
+        <div class="signup">
+            <form method="post" action="signup_handler.php">
+                <label for="login">Company Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="name"><br>
+                <label for="login">Email:</label><br>
+                <input type="text" id="login" name="login" placeholder="you@example.com"><br>
+                <label for="login">Password:</label><br>
+                <input type="password" id="password" name="password" placeholder="password">
+                <label for="login">Password:</label><br>
+                    <input type="password" id="passwordCheck" name="password" placeholder="re-enter password">
+                <input type="submit" value="Create Account">
+            </form> 
+        </div> 
+            
+    </body> 
 </html>
