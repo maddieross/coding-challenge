@@ -31,7 +31,7 @@ class Dao {
     }else{
         $user_ID = $this->createUserID(); 
         $conn = $this->getConnection();
-        $query = $conn->prepare("INSERT INTO users (userID, user, email, pw) VALUES ('$user_ID', '$name', '$email', '$password')");
+        $query = $conn->prepare("INSERT INTO users (userID, userName, email, pw) VALUES ('$user_ID', '$name', '$email', '$password')");
         $query->execute();
         $result = $query->fetch();
         createEmployeeTable($user_ID); 
