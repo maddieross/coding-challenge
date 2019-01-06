@@ -37,7 +37,7 @@ if (empty($password)) {
  // exit;
 }
 
-if($password != $_password){
+if(var_dump($password != $_password)){
   $messages = "passwords do not match";
   $_SESSION['messages'] = $messages;
   $valid = false;
