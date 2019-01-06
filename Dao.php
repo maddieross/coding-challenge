@@ -29,19 +29,20 @@ class Dao {
     if($email_exists){
         return NULL; 
     }else{
-        //$userID = $this->createUserID(); 
+        $user_ID = $this->createUserID(); 
         $conn = $this->getConnection();
-        $query = $conn->prepare("INSERT INTO users (userID, user, email, pw) VALUES (0, '$name', '$email', '$password')");
+        $query = $conn->prepare("INSERT INTO users (userID, user, email, pw) VALUES ('$user_ID', '$name', '$email', '$password')");
         $query->execute();
         $result = $query->fetch();
-        //createEmployeeTable(0); 
+        createEmployeeTable($user_ID); 
         return $result; 
     } 
   }
 
   private function createUserID(){
-    $conn = $this->getConnection();
     /*
+    $conn = $this->getConnection();
+    
     $query = $conn->prepare("SELECT MAX(userID) FROM users WHERE *");
     $query->execute();
     $result = $query->fetch();
