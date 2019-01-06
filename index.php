@@ -19,7 +19,7 @@
                 <label for="login">Login:</label><br>
                 <input type="text" id="login" name="login" placeholder="you@example.com"><br>
                 <label for="login">Password:</label><br>
-                    <input type="password" id="password" name="password" placeholder="password">
+                <input type="password" id="password" name="password" placeholder="password"><br>
                 <input type="submit" value="Login">
             </form> 
         </div> 
@@ -31,9 +31,9 @@
                 <label for="login">Email:</label><br>
                 <input type="text" id="login" name="login" placeholder="you@example.com"><br>
                 <label for="login">Password:</label><br>
-                <input type="password" id="password" name="password" placeholder="password">
+                <input type="password" id="password" name="password" placeholder="password"><br>
                 <label for="login">Password:</label><br>
-                    <input type="password" id="passwordCheck" name="password" placeholder="re-enter password">
+                <input type="password" id="passwordCheck" name="password" placeholder="re-enter password"><br>
                 <input type="submit" value="Create Account">
             </form> 
         </div> 
