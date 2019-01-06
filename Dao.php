@@ -24,10 +24,10 @@ class Dao {
     return $result; 
   }
 
-  public function newUser($name, $email, $password){
+  public function signUp($name, $email, $password){
     $email_exists =$this->checkEmail($email);
     if($email_exists){
-        return null; 
+        return NULL; 
     }else{
         $conn = $this->getConnection();
         $query = $conn->prepare("INSERT INTO users (user, email, pw) VALUES ('$name', '$email', '$password')");

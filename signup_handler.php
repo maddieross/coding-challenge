@@ -4,10 +4,14 @@ session_start();
 require_once 'Dao.php';
 $dao = new Dao();
 
-$fullName = $_POST['name'];
+$name = $_POST['name'];
+echo $name;
 $email = $_POST['email'];
+echo $email;
 $password = $_POST['password'];
+echo $password;
 $_password = $_POST['password_check'];
+echo $_password; 
 
 if (empty($fullName)) {
   $messages = "PLEASE FILL OUT ALL TEXT BOXES";
