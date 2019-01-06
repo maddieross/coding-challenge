@@ -17,9 +17,13 @@ class Dao {
   }
 
   public function loginIn($email, $password){
+    echo 'connected';
     $conn = $this->getConnection();
+    echo 'data';
     $query = $conn->prepare("SELECT * FROM users WHERE email='$email' AND pw='$password'");
+    echo 'q';
     $query->execute();
+    echo 'f';
     $result = $query->fetch();
     return $result; 
   }
