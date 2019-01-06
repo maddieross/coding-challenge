@@ -15,6 +15,7 @@
         ?>
         
         <div class="login">
+            Log In
             <form method="post" action="login_handler.php">
                 <label for="login">Login:</label><br>
                 <input type="text" id="login" name="login" placeholder="you@example.com"><br>
@@ -25,6 +26,7 @@
         </div> 
         
         <div class="signup">
+            Sigh Up
             <form method="post" action="signup_handler.php">
                 <label for="login">Company Name:</label><br>
                 <input type="text" id="name" name="name" placeholder="name"><br>
