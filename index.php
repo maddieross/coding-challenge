@@ -35,7 +35,7 @@
                 <label for="login">Password:</label><br>
                 <input type="password" id="password" name="password" placeholder="password"><br>
                 <label for="login">Password:</label><br>
-                <input type="password" id="password_check" name="password" placeholder="re-enter password"><br>
+                <input type="password" id="password_check" name="password_check" placeholder="re-enter password"><br>
                 <input type="submit" value="Create Account">
             </form> 
         </div> 
