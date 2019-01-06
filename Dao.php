@@ -29,6 +29,7 @@ class Dao {
     if($email_exists){
         return NULL; 
     }else{
+        echo 'here'; 
         $user_ID = createUserID(); 
         return $user_ID; 
         $conn = $this->getConnection();
