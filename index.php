@@ -31,7 +31,7 @@
                 <label for="login">Company Name:</label><br>
                 <input type="text" id="name" name="name" placeholder="name"><br>
                 <label for="login">Email:</label><br>
-                <input type="text" id="login" name="login" placeholder="you@example.com"><br>
+                <input type="text" id="email" name="email" placeholder="you@example.com"><br>
                 <label for="login">Password:</label><br>
                 <input type="password" id="password" name="password" placeholder="password"><br>
                 <label for="login">Password:</label><br>
