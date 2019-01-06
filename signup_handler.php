@@ -13,12 +13,12 @@ echo $password;
 $_password = $_POST['password_check'];
 echo $_password; 
 
-if (empty($fullName)) {
+if (empty($name)) {
   $messages = "PLEASE FILL OUT ALL TEXT BOXES";
   $_SESSION['messages'] = $messages;
   $valid = false;
   header("Location: index.php");
-  exit;
+  //exit;
 }
 
 if (empty($email)) {
@@ -26,7 +26,7 @@ if (empty($email)) {
   $_SESSION['messages'] = $messages;
   $valid = false;
   header("Location: index.php");
-  exit;
+  //exit;
 }
 
 if (empty($password)) {
@@ -34,7 +34,7 @@ if (empty($password)) {
   $_SESSION['messages'] = $messages;
   $valid = false;
   header("Location: index.php");
-  exit;
+ // exit;
 }
 
 if($password != $_password){
@@ -42,7 +42,7 @@ if($password != $_password){
   $_SESSION['messages'] = $messages;
   $valid = false;
   header("Location: index.php");
-  exit;
+  //exit;
 }
 
 
@@ -53,7 +53,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
   $_SESSION['sentiment'] = "bad";
   $_SESSION['messages'] = $messages;
   header("Location: index.php");
-  exit;
+  //exit;
 }
 
 $results = $dao->signup($login, $passowrd); 
@@ -64,12 +64,12 @@ if($results = NULL){
   $_SESSION['sentiment'] = "bad";
   $_SESSION['messages'] = $messages;
   header("Location: index.php");
-  exit;
+  //exit;
 }
 
 $messages = "Thanks for creating an account!";
 header('Location: account.php');
-exit; 
+//exit; 
 
 
 ?>
