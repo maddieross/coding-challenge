@@ -44,7 +44,8 @@ class Dao {
     $query = $conn->prepare("SELECT MAX(userID) FROM users WHERE *");
     $query->execute();
     $result = $query->fetch();
-    $user_ID = $result+1;  
+    $add = '1'; 
+    $user_ID = $result+$add;  
     return $user_ID;
   }
 
