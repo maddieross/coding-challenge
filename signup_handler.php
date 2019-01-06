@@ -38,7 +38,7 @@ if (empty($password)) {
   exit;
 }
 
-if(var_dump($password != $_password)){
+if($password != $_password){
   $messages = "passwords do not match";
   $_SESSION['messages'] = $messages;
   $valid = false;
@@ -57,7 +57,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
   exit;
 }
 
-$results = $dao->signup($login, $passowrd); 
+$results = $dao->signup($name, $email, $passowrd); 
 
 if($results = NULL){
   $messages = "an account is already associated with the email entered";
