@@ -13,7 +13,7 @@ echo $password;
 $_password = $_POST['password_check'];
 echo $_password; 
 
-/*
+
 if (empty($name)) {
   $messages = "PLEASE FILL OUT ALL TEXT BOXES";
   $_SESSION['messages'] = $messages;
@@ -72,6 +72,6 @@ $messages = "Thanks for creating an account!";
 header('Location: account.php');
 exit; 
 
-*/
+
 ?>
 
