@@ -1,5 +1,7 @@
 <?php
     session_start();
+    require_once 'Dao.php';
+    $dao = new Dao();
  ?>
 <html>
     <link href="index.css" type="text/css" rel="stylesheet" />
@@ -13,6 +15,14 @@
             }
             unset($_SESSION['messages']);
         ?>
+
+        <a href="benefit.php">preview of cost</a>
+        <a href="add_employee.php">add an employee</a>
+        <a href="employees.php">edit employee list</a>
+        <a href="edit_account.php">change account settings</a>
+        <a href="logout_handler.php">Logout</a>
+        
+
             
     </body> 
 </html>
