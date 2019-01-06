@@ -30,7 +30,7 @@ class Dao {
         return NULL; 
     }else{
         $user_ID = createUserID(); 
-        return $results; 
+        return $user_ID; 
         $conn = $this->getConnection();
         $query = $conn->prepare("INSERT INTO users (userID, userName, email, pw) VALUES ('$user_ID', '$name', '$email', '$password')");
         $query->execute();
@@ -45,7 +45,7 @@ class Dao {
     $query = $conn->prepare("SELECT MAX(userID) FROM users");
     $query->execute();
     $result = $query->fetch();
-    return $results;
+    return $result;
   }
 
   private function createEmployeeTable($user_ID){
