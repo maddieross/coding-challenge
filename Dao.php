@@ -30,7 +30,6 @@ class Dao {
         return NULL; 
     }else{
         $user_ID = $this->createUserID(); 
-        return $user_ID; 
         $conn = $this->getConnection();
         $query = $conn->prepare("INSERT INTO users (userID, userName, email, pw) VALUES ('$user_ID', '$name', '$email', '$password')");
         $query->execute();
