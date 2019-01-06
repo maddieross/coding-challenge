@@ -29,7 +29,7 @@ class Dao {
     if($email_exists){
         return NULL; 
     }else{
-        $user_ID = 0; 
+        $user_ID = createUserID(); 
         $conn = $this->getConnection();
         $query = $conn->prepare("INSERT INTO users (userID, userName, email, pw) VALUES ('$user_ID', '$name', '$email', '$password')");
         $query->execute();
@@ -40,20 +40,17 @@ class Dao {
   }
 
   private function createUserID(){
-    /*
     $conn = $this->getConnection();
-    
     $query = $conn->prepare("SELECT MAX(userID) FROM users WHERE *");
     $query->execute();
     $result = $query->fetch();
-    $user_ID = 0; 
-    */
-    return 0;
+    $user_ID = $result+1;  
+    return $user_ID;
   }
 
   private function createEmployeeTable($user_ID){
     $conn = $this->getConnection();
-    $query = $conn->prepare("CREATE TABLE $user_ID (employeeID int, lastName varchar(255), firstName varchar(255), paycheck int, dependents int, deduction int");
+    $query = $conn->prepare("CREATE TABLE $user_ID (employeeID int, lastName varchar(255), firstName varchar(255), paycheck int, dependents int, deduction int)");
     $query->execute();
   }
   
