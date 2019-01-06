@@ -29,12 +29,12 @@ class Dao {
     if($email_exists){
         return NULL; 
     }else{
-        $user_ID = $this->createUserID(); 
+        $user_ID = 0; 
         $conn = $this->getConnection();
         $query = $conn->prepare("INSERT INTO users (userID, userName, email, pw) VALUES ('$user_ID', '$name', '$email', '$password')");
         $query->execute();
         $result = $query->fetch();
-        createEmployeeTable($user_ID); 
+        //createEmployeeTable($user_ID); 
         return $result; 
     } 
   }
