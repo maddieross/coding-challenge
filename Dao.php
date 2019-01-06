@@ -41,7 +41,7 @@ class Dao {
 
   private function createUserID(){
     $conn = $this->getConnection();
-    $query = $conn->prepare("SELECT MAX(userID) FROM users WHERE *");
+    $query = $conn->prepare("SELECT MAX(userID) FROM users");
     $query->execute();
     $result = $query->fetch();
     $add = '1'; 
