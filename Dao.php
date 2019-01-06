@@ -34,18 +34,20 @@ class Dao {
         $query = $conn->prepare("INSERT INTO users (userID, user, email, pw) VALUES ('$user_ID', $name', '$email', '$password')");
         $query->execute();
         $result = $query->fetch();
-        createEmployeeTable($user_ID); 
+        //createEmployeeTable($user_ID); 
         return $result; 
     } 
   }
 
   private function createUserID(){
     $conn = $this->getConnection();
+    /*
     $query = $conn->prepare("SELECT MAX(userID) FROM users WHERE *");
     $query->execute();
     $result = $query->fetch();
-    $user_ID = $result+1; 
-    return $user_ID;
+    $user_ID = 0; 
+    */
+    return 0;
   }
 
   private function createEmployeeTable($user_ID){
