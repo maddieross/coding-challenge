@@ -8,7 +8,7 @@ echo $password;
 require_once 'Dao.php';
 $dao = new Dao();
 echo '1';
-$results = $dao->loginIn($email, $passowrd); 
+$results = $dao->loginIn($email, $password); 
 echo '2'; 
 if ($results) {
     $_SESSION['logged_in'] = true;
