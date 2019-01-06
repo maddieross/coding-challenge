@@ -49,6 +49,8 @@ class Dao {
   }
 
   private function createEmployeeTable($user_ID){
+    $employee = 'employee';
+    $table_name = $employee.$user_ID; 
     $conn = $this->getConnection();
     $query = $conn->prepare("CREATE TABLE $user_ID (employeeID int, lastName varchar(255), firstName varchar(255), paycheck int, dependents int, deduction int)");
     $query->execute();
