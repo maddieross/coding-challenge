@@ -54,7 +54,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
   exit;
 }
 
-$results = $dao->signup($name, $email, $passowrd); 
+$results = $dao->signup($name, $email, $password); 
 
 if($results = NULL){
   $messages = "an account is already associated with the email entered";
@@ -66,6 +66,7 @@ if($results = NULL){
 }
 
 $messages = "Thanks for creating an account!";
+$_SESSION['messages'] = $messages;
 header('Location: account.php');
 exit; 
 
