@@ -56,7 +56,6 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 $results = $dao->signup($name, $email, $password); 
 
-echo $results; 
 if($results == NULL){
   $messages = "an account is already associated with the email entered";
   $valid = false;
