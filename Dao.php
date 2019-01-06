@@ -29,7 +29,6 @@ class Dao {
     if($email_exists){
         return NULL; 
     }else{
-        echo 'here'; 
         $user_ID = $this->createUserID(); 
         return $user_ID; 
         $conn = $this->getConnection();
@@ -46,7 +45,8 @@ class Dao {
     $query = $conn->prepare("SELECT MAX(userID) FROM users");
     $query->execute();
     $result = $query->fetch();
-    return $result;
+    $user_ID = $result[0] + 1; 
+    return $user_ID;
   }
 
   private function createEmployeeTable($user_ID){
