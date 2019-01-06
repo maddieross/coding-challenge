@@ -34,6 +34,7 @@ class Dao {
         $query = $conn->prepare("INSERT INTO users (userID, userName, email, pw) VALUES ('$user_ID', '$name', '$email', '$password')");
         $query->execute();
         $result = $query->fetch();
+        echo 'here'; 
         $this_>createEmployeeTable($user_ID); 
         return $result; 
     } 
@@ -49,6 +50,7 @@ class Dao {
   }
 
   private function createEmployeeTable($user_ID){
+    echo '$user_ID'; 
     $employee = 'employee';
     $table_name = $employee.$user_ID; 
     echo $table_name;
