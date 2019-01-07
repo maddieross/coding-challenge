@@ -67,6 +67,8 @@ if($results == NULL){
 
 $messages = "Thanks for creating an account!";
 $_SESSION['messages'] = $messages;
+$_SESSION['logged_in'] = true;
+$_SESSION['user_ID'] = $results;
 header('Location: account.php');
 exit; 
 
