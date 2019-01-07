@@ -82,8 +82,11 @@ class Dao {
     $query = $conn->prepare("SELECT MAX(employeeID) FROM $table_name");
     $query->execute();
     $result = $query->fetch();
-    $employee_ID = $result[0] + 1; 
-    return $employee_ID;
+    if($result){
+      $employee_ID = $result[0] + 1; 
+      return $employee_ID;
+    }
+    return 0; 
   }
 }
 ?>
