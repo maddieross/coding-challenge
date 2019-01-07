@@ -56,6 +56,7 @@ class Dao {
     $dependent = 'dependent';
     $table_name = $dependent.$user_ID; 
     $query = $conn->prepare("CREATE TABLE $table_name (employeeID int, lastName varchar(255), firstName varchar(255), deduction int)");
+    $query->execute();
   }
   
   private function checkEmail($email){
