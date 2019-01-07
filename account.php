@@ -1,8 +1,12 @@
-<?php
-    session_start();
-    require_once 'Dao.php';
-    $dao = new Dao();
- ?>
+<?php 
+	session_start();
+	if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
+        header('Location: login.php');
+        exit;
+      }
+      $_SESSION['logged_in'] = true;
+?>
+
 <html>
     <link href="index.css" type="text/css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -16,10 +20,10 @@
             unset($_SESSION['messages']);
         ?>
 
-        <a href="benefit.php">preview of cost</a>
-        <a href="add_employee.php">add an employee</a>
-        <a href="employees.php">edit employee list</a>
-        <a href="edit_account.php">change account settings</a>
+        <a href="benefit.php">preview of cost</a> <br>
+        <a href="add_employee.php">add an employee</a> <br>
+        <a href="employees.php">edit employee list</a> <br>
+        <a href="edit_account.php">change account settings</a> <br>
         <a href="logout_handler.php">Logout</a>
         
 
