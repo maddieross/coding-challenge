@@ -72,14 +72,14 @@ class Dao {
     $table_name = $employee.$user_ID;
     $employee_ID = $this->createEmployeeID($table_name); 
     $conn = $this->getConnection(); 
-    $query = $conn->prepare("INSERT INTO  $table_name (employeeID, lastName, firstName, paycheck, dependents, deduction) VALUES ('$employee_ID', '$last_name', '$first_name', $paycheck, $dependents, 1000 )");
+    $query = $conn->prepare("INSERT INTO  '$table_name' (employeeID, lastName, firstName, paycheck, dependents, deduction) VALUES ('$employee_ID', '$last_name', '$first_name', $paycheck, $dependents, 1000 )");
     $query->execute();
     return $employee_ID; 
   }
 
   private function createEmployeeID($table_name){
     $conn = $this->getConnection();
-    $query = $conn->prepare("SELECT MAX(employeeID) FROM $table_name");
+    $query = $conn->prepare("SELECT MAX(employeeID) FROM '$table_name'");
     $query->execute();
     $result = $query->fetch();
     if($result){
