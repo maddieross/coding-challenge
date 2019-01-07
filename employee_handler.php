@@ -1,14 +1,18 @@
 <?php
 session_start();
 
-$email = $_POST['email'];
-$password = $_POST['password'];
+$first_name = $_POST['first_name'];
+$last_name = $_POST['last_name'];
+$paycheck_amount = $_POST['paycheck_amount'];
+$dependents = $_POST['dependents'];
+$user_ID =     $_SESSION['user_ID'] = $results[0];
 require_once 'Dao.php';
 $dao = new Dao();
+
 $results = $dao->loginIn($email, $password);  
 if ($results) {
     $_SESSION['logged_in'] = true;
-    $_SESSION['user_ID'] = $results[0];
+    $_SESSION['email'] = $login;
     header('Location: account.php');
     exit;
 }
