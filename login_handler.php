@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$email = $_POST['email'];
+$email = $_POST['login'];
 $password = $_POST['password'];
 require_once 'Dao.php';
 $dao = new Dao();
