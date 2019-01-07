@@ -21,7 +21,7 @@ class Dao {
     $query = $conn->prepare("SELECT userID FROM users WHERE email='$email' AND pw='$password'");
     $query->execute();
     $result = $query->fetch();
-    return $result[0]; 
+    return $result; 
   }
 
   public function signUp($name, $email, $password){
