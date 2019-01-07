@@ -5,23 +5,15 @@ $first_name = $_POST['first_name'];
 $last_name = $_POST['last_name'];
 $paycheck_amount = $_POST['paycheck_amount'];
 $dependents = $_POST['dependents'];
-$user_ID =     $_SESSION['user_ID'] = $results[0];
+$user_ID = $_SESSION['user_ID'];
+
 require_once 'Dao.php';
 $dao = new Dao();
-
-$results = $dao->loginIn($email, $password);  
-if ($results) {
-    $_SESSION['logged_in'] = true;
-    $_SESSION['email'] = $login;
-    header('Location: account.php');
-    exit;
+$results = $dao->newEmployee($user_ID, $first_name, $last_name, $paycheck, $dependents);  
+if($dependents != 0){
+    $_SESSION['employee_ID'] = $results; 
+    $_SESSION['dependents'] = $dependents;
+    echo $first_name[0]; 
 }
-
-$_SESSION['logged_in'] = false;
-$message = "Username or password invalid";
-$_SESSION['messages'] = $messages;
-
-header('Location: index.php');
-exit;
 
 ?>
