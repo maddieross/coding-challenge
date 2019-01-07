@@ -18,10 +18,10 @@ class Dao {
 
   public function loginIn($email, $password){
     $conn = $this->getConnection();
-    $query = $conn->prepare("SELECT userName FROM users WHERE email='$email' AND pw='$password'");
-    $query->execute(array($email));
+    $query = $conn->prepare("SELECT userID FROM users WHERE email='$email' AND pw='$password'");
+    $query->execute();
     $result = $query->fetch();
-    return $result; 
+    return $result[0]; 
   }
 
   public function signUp($name, $email, $password){
@@ -34,7 +34,7 @@ class Dao {
         $query = $conn->prepare("INSERT INTO users (userID, userName, email, pw) VALUES ('$user_ID', '$name', '$email', '$password')");
         $query->execute();
         $this->createEmployeeTable($user_ID); 
-        return 1; 
+        return $user_ID; 
     } 
   }
 
@@ -48,10 +48,8 @@ class Dao {
   }
 
   private function createEmployeeTable($user_ID){
-    echo '$user_ID'; 
     $employee = 'employee';
     $table_name = $employee.$user_ID; 
-    echo $table_name;
     $conn = $this->getConnection();
     $query = $conn->prepare("CREATE TABLE $table_name (employeeID int, lastName varchar(255), firstName varchar(255), paycheck int, dependents int, deduction int)");
     $query->execute();
@@ -63,6 +61,20 @@ class Dao {
     $query->execute();
     $email_exists = $query->fetchAll();
     return $email_exists; 
+  }
+  
+  public function newEmployee($firs_name, $last_name, $paycheck, $dependents){
+    $employee_ID = $this->createEmployeeID(); 
+    $conn = $this->getConnection(); 
+  }
+
+  private function createEmployeeID(){
+    $conn = $this->getConnection();
+    $query = $conn->prepare("SELECT MAX(employeeID) FROM ");
+    $query->execute();
+    $result = $query->fetch();
+    $user_ID = $result[0] + 1; 
+    return $user_ID;
   }
 }
 ?>

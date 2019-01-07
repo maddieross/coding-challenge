@@ -8,7 +8,7 @@ $dao = new Dao();
 $results = $dao->loginIn($email, $password);  
 if ($results) {
     $_SESSION['logged_in'] = true;
-    $_SESSION['user_ID'] = $results[0];
+    $_SESSION['user_ID'] = $results;
     header('Location: account.php');
     exit;
 }
