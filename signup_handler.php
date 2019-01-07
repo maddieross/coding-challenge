@@ -12,7 +12,7 @@ $_password = $_POST['password_check'];
 
 
 if (empty($name)) {
-  $messages = "PLEASE FILL OUT ALL TEXT BOXES";
+  $messages = "PLEASE FILL OUT ALL TEXT BOXES name";
   $_SESSION['messages'] = $messages;
   $valid = false;
   header("Location: index.php");
@@ -20,7 +20,7 @@ if (empty($name)) {
 }
 
 if (empty($email)) {
-  $messages = "PLEASE FILL OUT ALL TEXT BOXES";
+  $messages = "PLEASE FILL OUT ALL TEXT BOXES email";
   $_SESSION['messages'] = $messages;
   $valid = false;
   header("Location: index.php");
@@ -28,7 +28,7 @@ if (empty($email)) {
 }
 
 if (empty($password)) {
-  $messages = "PLEASE FILL OUT ALL TEXT BOXES";
+  $messages = "PLEASE FILL OUT ALL TEXT BOXES password";
   $_SESSION['messages'] = $messages;
   $valid = false;
   header("Location: index.php");
