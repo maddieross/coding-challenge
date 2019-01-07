@@ -18,7 +18,6 @@
             echo $_SESSION['messages'];
             }
             unset($_SESSION['messages']);
-            echo $_SESSION['user_ID']; 
         ?>
 
         <a href="benefit.php">preview of cost</a> <br>

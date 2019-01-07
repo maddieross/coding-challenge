@@ -33,7 +33,7 @@ class Dao {
         $conn = $this->getConnection();
         $query = $conn->prepare("INSERT INTO users (userID, userName, email, pw) VALUES ('$user_ID', '$name', '$email', '$password')");
         $query->execute();
-        $this->createEmployeeTable($user_ID); 
+        $this->createUserTables($user_ID); 
         return $user_ID; 
     } 
   }
@@ -47,12 +47,15 @@ class Dao {
     return $user_ID;
   }
 
-  private function createEmployeeTable($user_ID){
+  private function createUserTables($user_ID){
     $employee = 'employee';
     $table_name = $employee.$user_ID; 
     $conn = $this->getConnection();
     $query = $conn->prepare("CREATE TABLE $table_name (employeeID int, lastName varchar(255), firstName varchar(255), paycheck int, dependents int, deduction int)");
     $query->execute();
+    $dependent = 'dependent';
+    $table_name = $dependent.$user_ID; 
+    $query = $conn->prepare("CREATE TABLE $table_name (employeeID int, lastName varchar(255), firstName varchar(255), deduction int)");
   }
   
   private function checkEmail($email){
@@ -63,18 +66,23 @@ class Dao {
     return $email_exists; 
   }
   
-  public function newEmployee($firs_name, $last_name, $paycheck, $dependents){
-    $employee_ID = $this->createEmployeeID(); 
+  public function newEmployee($user_ID, $first_name, $last_name, $paycheck, $dependents){
+    $employee = 'employee';
+    $table_name = $employee.$user_ID;
+    $employee_ID = $this->createEmployeeID($table_name); 
     $conn = $this->getConnection(); 
+    $query = $conn->prepare("INSERT INTO  $table_name (employeeID, lastName, firstName, paycheck, dependents, deduction) VALUES ('$employee_ID', '$last_name', '$first_name', $paycheck, $dependents, 1000 )");
+    $query->execute();
+    return $employee_ID; 
   }
 
-  private function createEmployeeID(){
+  private function createEmployeeID($table_name){
     $conn = $this->getConnection();
-    $query = $conn->prepare("SELECT MAX(employeeID) FROM ");
+    $query = $conn->prepare("SELECT MAX(employeeID) FROM $table_name");
     $query->execute();
     $result = $query->fetch();
-    $user_ID = $result[0] + 1; 
-    return $user_ID;
+    $employee_ID = $result[0] + 1; 
+    return $employee_ID;
   }
 }
 ?>
