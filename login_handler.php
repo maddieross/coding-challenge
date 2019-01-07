@@ -14,7 +14,7 @@ if ($results) {
 }
 
 $_SESSION['logged_in'] = false;
-$message = "Username or password invalid";
+$messages = "Username or password invalid";
 $_SESSION['messages'] = $messages;
 
 header('Location: index.php');
