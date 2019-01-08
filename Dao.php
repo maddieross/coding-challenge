@@ -73,7 +73,7 @@ class Dao {
     $employee = 'employee';
     $table_name = $employee.$user_ID;
     $employee_ID = $this->createEmployeeID($table_name); 
-    $deduction = 1000; //getDeduction('true', $first_name); 
+    $deduction = getDeduction('true', $first_name); 
     $conn = $this->getConnection(); 
     $query = $conn->prepare("INSERT INTO $table_name (employeeID, lastName, firstName, paycheck, dependents, deduction) VALUES ('$employee_ID', '$last_name', '$first_name', '$paycheck', '$dependents', '$deduction' )");
     $query->execute();
@@ -86,6 +86,7 @@ class Dao {
     }else{
       $deduction = $this->dependent_deduction;
     }
+    //discount for names beginning with A
     if($first_name[0] == 'A' || $first_name[0] == 'a'){
         return $deduction - ($deduction*.10);
     }
