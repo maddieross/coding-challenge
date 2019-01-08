@@ -16,9 +16,12 @@ $results = $dao->newEmployee($user_ID, $first_name, $last_name, $paycheck, $depe
 if($dependents != 0){
     $_SESSION['employee_ID'] = $results; 
     $_SESSION['dependents'] = $dependents;
-    echo $first_name[0]; 
 }
 */
-echo $first_name[0];
+if($first_name[M] == 'M'){
+    echo 'true';
+}else{
+    echo 'fales'; 
+}
 
 ?>
