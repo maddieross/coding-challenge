@@ -87,9 +87,12 @@ class Dao {
       $deduction = $this->dependent_deduction;
     }
     //discount for names beginning with A
+    /*
     if($first_name[0] == 'A' || $first_name[0] == 'a'){
         return $deduction - ($deduction*.10);
     }
+    return $deduction; 
+    */
     return $deduction; 
   }
 
