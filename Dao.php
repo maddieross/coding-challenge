@@ -5,6 +5,8 @@ class Dao {
   private $db = "heroku_27a5636b1b521da";
   private $user = "b013e8f8c4be3a";
   private $pass = "d4ba5526";
+  private $employee_deduction =  1000;
+  private $dependent_deduction = 500; 
   
   private function getConnection(){
     try {
@@ -71,11 +73,23 @@ class Dao {
     $employee = 'employee';
     $table_name = $employee.$user_ID;
     $employee_ID = $this->createEmployeeID($table_name); 
-    echo $employee_ID; 
+    $deduction = 1000; //getDeduction('true', $first_name); 
     $conn = $this->getConnection(); 
-    $query = $conn->prepare("INSERT INTO $table_name (employeeID, lastName, firstName, paycheck, dependents, deduction) VALUES ('$employee_ID', '$last_name', '$first_name', $paycheck, $dependents, 1000 )");
+    $query = $conn->prepare("INSERT INTO $table_name (employeeID, lastName, firstName, paycheck, dependents, deduction) VALUES ('$employee_ID', '$last_name', '$first_name', '$paycheck', '$dependents', '$deduction' )");
     $query->execute();
     return $employee_ID; 
+  }
+
+  private function getDeduction($employee, $first_name){
+    if($employee == 'true'){
+      $deduction = $this->employee_deduction; 
+    }else{
+      $deduction = $this->dependent_deduction;
+    }
+    if($first_name[0] == 'A' || $first_name[0] == 'a'){
+        return $deduction - ($deduction*.10);
+    }
+    return $deduction; 
   }
 
   private function createEmployeeID($table_name){
@@ -83,11 +97,10 @@ class Dao {
     $query = $conn->prepare("SELECT MAX(employeeID) FROM $table_name");
     $query->execute();
     $result = $query->fetch();
-    if($result){
-      $employee_ID = $result[0] + 1; 
-      return $employee_ID;
-    }
-    return 0; 
+    $employee_ID = $result[0] + 1; 
+    return $employee_ID; 
   }
+
+  
 }
 ?>
