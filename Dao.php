@@ -104,7 +104,7 @@ class Dao {
 
   public function newDependent($user_ID, $employee_ID, $first_name, $last_name){
     $dependent = 'dependent';
-    $table_name = $employee.$user_ID;
+    $table_name = $dependent.$user_ID;
     $deduction = $this->getDeduction('false', $first_name); 
     $conn = $this->getConnection(); 
     $query = $conn->prepare("INSERT INTO $table_name (employeeID, lastName, firstName, deduction) VALUES ('$employee_ID', '$last_name', '$first_name', '$deduction' )");
