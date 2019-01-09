@@ -6,5 +6,17 @@
       }
       $_SESSION['logged_in'] = true;
 
-    echo $_SESSION['employee_ID']; 
+    $v = "1";
+    $c = $v."hello"; 
+    echo $c; 
 ?>
+
+<html>
+    <link href="index.css" type="text/css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <header><title>Paylocity Coding Challenge</title></header>
+    <h1><a href="index.php">Coding Challenge</a></h1> 
+    <body>
+
+    </body> 
+</html>

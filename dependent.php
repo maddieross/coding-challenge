@@ -13,7 +13,7 @@
     <header><title>Paylocity Coding Challenge</title></header>
     <h1><a href="index.php">Coding Challenge</a></h1> 
     <body>
-    <div class="employee">
+    <div class="dependent">
           Dependent Information
             <form method="post" action="dependent_handler.php">
                 <label for="first_name">First Name:</label><br>
