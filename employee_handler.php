@@ -12,8 +12,7 @@ require_once 'Dao.php';
 $dao = new Dao();
 $employee_ID = $dao->newEmployee($user_ID, $first_name, $last_name, $paycheck, $dependents);  
 */
-echo $num_dependents;
-/*
+
 if($num_dependents != 0){
     $_SESSION['employee_ID'] = $results; 
     $_SESSION['num_dependents'] = $num_dependents; 
@@ -23,6 +22,6 @@ if($num_dependents != 0){
 
 header('Location: employees.php.php');
 exit;
-*/
+
 
 ?>
