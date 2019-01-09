@@ -6,26 +6,21 @@ $last_name = $_POST['last_name'];
 $user_ID = $_SESSION['user_ID'];
 $employee_ID = $_SESSION['employee_ID'];
 $num_dependents = $_SESSION['num_dependents']-1;
-echo $num_dependents; 
+
 /*
 require_once 'Dao.php';
 $dao = new Dao();
 $employee_ID = $dao->newDependent($user_ID, $first_name, $last_name);  
+*/
 
 
 if($num_dependents != 0){
-    
-    echo $_SESSION['employee_ID'];
-    echo $user_ID = $_SESSION['user_ID'];
-    echo $num_dependents; 
-
-   // header('Location: dependent.php');
-    //exit;
-    
+    header('Location: dependent.php');
+    exit;
 }
 
 header('Location: employees.php');
 exit;
-*/
+
 
 ?>
