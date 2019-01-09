@@ -7,15 +7,11 @@ $user_ID = $_SESSION['user_ID'];
 $employee_ID = $_SESSION['employee_ID'];
 $num_dependents = $_SESSION['num_dependents']-1;
 
-echo $employee_ID;
-echo $user_ID;
-echo $num_dependents; 
-
 /*
 require_once 'Dao.php';
 $dao = new Dao();
 $employee_ID = $dao->newDependent($user_ID, $first_name, $last_name);  
-
+*/
 
 if($num_dependents != 0){
     
@@ -30,6 +26,6 @@ if($num_dependents != 0){
 
 header('Location: employees.php');
 exit;
-*/
+
 
 ?>
