@@ -40,6 +40,14 @@ class Dao {
     } 
   }
 
+  private function checkEmail($email){
+    $conn = $this->getConnection(); 
+    $query = $conn->prepare("SELECT email FROM users WHERE email = '$email'");
+    $query->execute();
+    $email_exists = $query->fetchAll();
+    return $email_exists; 
+  }
+
   private function createUserID(){
     $conn = $this->getConnection();
     $query = $conn->prepare("SELECT MAX(userID) FROM users");
@@ -60,15 +68,7 @@ class Dao {
     $query = $conn->prepare("CREATE TABLE $table_name (employeeID int, lastName varchar(255), firstName varchar(255), deduction int)");
     $query->execute();
   }
-  
-  private function checkEmail($email){
-    $conn = $this->getConnection(); 
-    $query = $conn->prepare("SELECT email FROM users WHERE email = '$email'");
-    $query->execute();
-    $email_exists = $query->fetchAll();
-    return $email_exists; 
-  }
-  
+
   public function newEmployee($user_ID, $first_name, $last_name, $paycheck, $dependents){
     $employee = 'employee';
     $table_name = $employee.$user_ID;
@@ -77,6 +77,15 @@ class Dao {
     $conn = $this->getConnection(); 
     $query = $conn->prepare("INSERT INTO $table_name (employeeID, lastName, firstName, paycheck, dependents, deduction) VALUES ('$employee_ID', '$last_name', '$first_name', '$paycheck', '$dependents', '$deduction' )");
     $query->execute();
+    return $employee_ID; 
+  }
+
+  private function createEmployeeID($table_name){
+    $conn = $this->getConnection();
+    $query = $conn->prepare("SELECT MAX(employeeID) FROM $table_name");
+    $query->execute();
+    $result = $query->fetch();
+    $employee_ID = $result[0] + 1; 
     return $employee_ID; 
   }
 
@@ -93,13 +102,13 @@ class Dao {
     return $deduction; 
   }
 
-  private function createEmployeeID($table_name){
-    $conn = $this->getConnection();
-    $query = $conn->prepare("SELECT MAX(employeeID) FROM $table_name");
+  public function newDependent($user_ID, $employee_ID, $first_name, $last_name){
+    $dependent = 'dependent';
+    $table_name = $employee.$user_ID;
+    $deduction = $this->getDeduction('false', $first_name); 
+    $conn = $this->getConnection(); 
+    $query = $conn->prepare("INSERT INTO $table_name (employeeID, lastName, firstName, deduction) VALUES ('$employee_ID', '$last_name', '$first_name', '$deduction' )");
     $query->execute();
-    $result = $query->fetch();
-    $employee_ID = $result[0] + 1; 
-    return $employee_ID; 
   }
 
   

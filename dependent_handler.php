@@ -15,6 +15,7 @@ $employee_ID = $dao->newDependent($user_ID, $first_name, $last_name);
 
 
 if($num_dependents != 0){
+    $_SESSION['num_dependents'] = $num_dependents; 
     header('Location: dependent.php');
     exit;
 }
