@@ -9,7 +9,7 @@ $num_dependents = $_SESSION['num_dependents']-1;
 
 require_once 'Dao.php';
 $dao = new Dao();
-$employee_ID = $dao->newDependent($user_ID, $first_name, $last_name);  
+$dao->newDependent($user_ID, $employee_ID, $first_name, $last_name);  
 
 if($num_dependents != 0){
     $_SESSION['num_dependents'] = $num_dependents; 
