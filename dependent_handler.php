@@ -19,8 +19,8 @@ if($num_dependents != 0){
     echo $user_ID = $_SESSION['user_ID'];
     echo $num_dependents; 
 
-    header('Location: dependent.php');
-    exit;
+   // header('Location: dependent.php');
+    //exit;
     
 }
 
