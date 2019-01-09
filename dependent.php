@@ -15,10 +15,11 @@
     <body>
     <div class="employee">
           Dependent Information
-            <form method="post" action="employee_handler.php">
+            <form method="post" action="dependent_handler.php">
                 <label for="first_name">First Name:</label><br>
                 <input type="text" id="first_name" name="first_name" placeholder="first name"><br>
                 <label for="last_name">Last Name:</label><br>
+                <input type="text" id="last_name" name="last_name" placeholder="last name"><br>
                 <input type="submit" value="add dependent">
             </form> 
         </div>         

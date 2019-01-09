@@ -14,7 +14,7 @@
     <h1><a href="index.php">Coding Challenge</a></h1> 
     <body>
     <div class="employee">
-          Employee Information: 
+          Employee Information
             <form method="post" action="employee_handler.php">
                 <label for="first_name">First Name:</label><br>
                 <input type="text" id="first_name" name="first_name" placeholder="first name"><br>
