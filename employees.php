@@ -9,14 +9,14 @@
     require_once 'Dao.php';
     $dao = new Dao();
     $results = $dao->displayEmployees($_SESSION['user_ID']);  
-    echo sizeOf($results); 
-    /*
     for($x = 0; $x < sizeof($results); $x++){
         for($y = 0; $y < sizeOf($results); $y++){
-
+            $employee_ID = $results[$x][$y]; 
+            echo "employee ID: ".$employee_ID."<br>"; 
+            echo "Last Name: ".$results[$x][$y+1]."<br>";
+            echo "First Name: ".$results[$x][$y+1]."<br>";    
         }
     }
-    */
     ?>
 
 
