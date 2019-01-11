@@ -112,16 +112,11 @@ class Dao {
   }
 
   public function displayEmployees($user_ID){
-    
     $table_name = $this->employee.$user_ID;
     $conn = $this->getConnection(); 
-    /*
-    $query = $conn->prepare("SELECT * FROM $table_name");
+    $query = $conn->prepare("SELECT employeeID, lastName, firstName FROM $table_name");
     $query->execute();
     $result = $query->fetch();
-    */
-    $result = $conn->query("SELECT * FROM $table_name");
-
     return $result; 
   }
 }
