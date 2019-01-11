@@ -7,6 +7,8 @@ class Dao {
   private $pass = "d4ba5526";
   private $employee_deduction =  1000;
   private $dependent_deduction = 500; 
+  private $employee = 'employee';
+  private $dependent = 'dependent';
   
   private function getConnection(){
     try {
@@ -22,8 +24,8 @@ class Dao {
     $conn = $this->getConnection();
     $query = $conn->prepare("SELECT userID FROM users WHERE email='$email' AND pw='$password'");
     $query->execute();
-    $result = $query->fetch();
-    return $result; 
+    $results = $query->fetch();
+    return $results; 
   }
 
   public function signUp($name, $email, $password){
@@ -52,13 +54,12 @@ class Dao {
     $conn = $this->getConnection();
     $query = $conn->prepare("SELECT MAX(userID) FROM users");
     $query->execute();
-    $result = $query->fetch();
-    $user_ID = $result[0] + 1; 
+    $results = $query->fetch();
+    $user_ID = $results[0] + 1; 
     return $user_ID;
   }
 
   private function createUserTables($user_ID){
-    $employee = 'employee';
     $table_name = $employee.$user_ID; 
     $conn = $this->getConnection();
     $query = $conn->prepare("CREATE TABLE $table_name (employeeID int, lastName varchar(255), firstName varchar(255), paycheck int, dependents int, deduction int)");
@@ -71,7 +72,7 @@ class Dao {
 
   public function newEmployee($user_ID, $first_name, $last_name, $paycheck, $dependents){
     $employee = 'employee';
-    $table_name = $employee.$user_ID;
+    $table_name = $this->employee.$user_ID;
     $employee_ID = $this->createEmployeeID($table_name); 
     $deduction = $this->getDeduction('true', $first_name); 
     $conn = $this->getConnection(); 
@@ -84,13 +85,13 @@ class Dao {
     $conn = $this->getConnection();
     $query = $conn->prepare("SELECT MAX(employeeID) FROM $table_name");
     $query->execute();
-    $result = $query->fetch();
-    $employee_ID = $result[0] + 1; 
+    $results = $query->fetch();
+    $employee_ID = $results[0] + 1; 
     return $employee_ID; 
   }
 
-  private function getDeduction($employee, $first_name){
-    if($employee == 'true'){
+  private function getDeduction($boolean, $first_name){
+    if($boolean == 'true'){
       $deduction = $this->employee_deduction; 
     }else{
       $deduction = $this->dependent_deduction;
@@ -103,14 +104,19 @@ class Dao {
   }
 
   public function newDependent($user_ID, $employee_ID, $first_name, $last_name){
-    $dependent = 'dependent';
-    $table_name = $dependent.$user_ID;
+    $table_name = $this->dependent.$user_ID;
     $deduction = $this->getDeduction('false', $first_name); 
     $conn = $this->getConnection(); 
     $query = $conn->prepare("INSERT INTO $table_name (employeeID, lastName, firstName, deduction) VALUES ('$employee_ID', '$last_name', '$first_name', '$deduction' )");
     $query->execute();
   }
 
-  
+  public function displayEmployees($user_ID){
+    $table_name = $this->employee.$user_ID;
+    $conn = $this->getConnection(); 
+    $query = $conn->prepare("SELECT * FROM $table_name");
+    $query->execute();
+    $result = $query->fetch();
+  }
 }
 ?>
