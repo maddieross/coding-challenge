@@ -11,9 +11,10 @@
     $results = $dao->displayEmployees($_SESSION['user_ID']);  
     for($x = 0; $x < sizeof($results); $x++){
         $employee_ID = $results[$x][0]; 
-        echo "employee ID: ".$employee_ID."<br>"; 
-        echo "Last Name: ".$results[$x][1]."<br>";
-        echo "First Name: ".$results[$x][2]."<br>";    
+        echo "Last Name: ".$results[$x][1];
+        echo "First Name: ".$results[$x][2];
+        echo "<a href=\"edit_employee.php?a=".$employee_ID."\">edit</a>";
+        echo "<a href=\"delete_employee_handler.php?a=".$employee_ID."\">x</a><br>";
     }
     ?>
 
