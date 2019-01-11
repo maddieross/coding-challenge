@@ -9,7 +9,7 @@
     require_once 'Dao.php';
     $dao = new Dao();
     $results = $dao->displayEmployees($_SESSION['user_ID']);  
-    echo $results[1];
+    echo $results[4];
     echo $results[5]; 
     /*
     for($x = 0; $x < sizeof($results); $x++){
