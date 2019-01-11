@@ -23,14 +23,14 @@
             <tr>
                 <th>Last Name</th>
                 <th>First Name</th> 
-                <th> </th>
+                <th>          </th>
             </tr>
             <?php
                 for($x = 0; $x < sizeof($results); $x++){
                     $employee_ID = $results[$x][0]; 
                     echo "<tr>";
-                    echo "<td>".$results[$x][1]."</td";
-                    echo "<td>".$results[$x][2]."</td";
+                    echo "<td>".$results[$x][1]."</td>";
+                    echo "<td>".$results[$x][2]."</td>";
                     echo "<td> <a href=\"edit_employee.php?a=".$employee_ID."\">edit</a>";
                     echo " <a href=\"delete_employee_handler.php?a=".$employee_ID."\">delete</a></td>";
                     echo "</tr>";
