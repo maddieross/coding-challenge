@@ -3,7 +3,7 @@ session_start();
 
 $first_name = $_POST['first_name'];
 $last_name = $_POST['last_name'];
-$paycheck_amount = $_POST['paycheck_amount'];
+$paycheck = $_POST['paycheck'];
 $num_dependents = $_POST['dependents'];
 $user_ID = $_SESSION['user_ID'];
 

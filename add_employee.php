@@ -21,7 +21,7 @@
                 <label for="last_name">Last Name:</label><br>
                 <input type="text" id="last_name" name="last_name" placeholder="last name"><br>
                 <label for="paycheck_amount">Paycheck Amount:</label><br>
-                <input type="number" id="paycheck_amount" name="paycheck_amount" placeholder="2000"><br>
+                <input type="number" id="paycheck" name="paycheck" placeholder="2000"><br>
                 <label for="dependents">Number of Dependents:</label><br>
                 <input type="number" id="dependents" name="dependents" placeholder="0"><br>
                 <input type="submit" value="add employee">
