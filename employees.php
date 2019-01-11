@@ -10,11 +10,11 @@
     $dao = new Dao();
     $results = $dao->displayEmployees($_SESSION['user_ID']);  
     for($x = 0; $x < sizeof($results); $x++){
-        for($y = 0; $y < sizeOf($results); $y++){
+        for($y = 0; $y < sizeOf($results); $y+3){
             $employee_ID = $results[$x][$y]; 
             echo "employee ID: ".$employee_ID."<br>"; 
             echo "Last Name: ".$results[$x][$y+1]."<br>";
-            echo "First Name: ".$results[$x][$y+1]."<br>";    
+            echo "First Name: ".$results[$x][$y+2]."<br>";    
         }
     }
     ?>
