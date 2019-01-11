@@ -33,6 +33,7 @@
                     echo "<td>".$results[$x][2]."</td";
                     echo "<td> <a href=\"edit_employee.php?a=".$employee_ID."\">edit</a>";
                     echo " <a href=\"delete_employee_handler.php?a=".$employee_ID."\">delete</a></td>";
+                    echo "</tr>";
                 }
             ?>
         </table>     
