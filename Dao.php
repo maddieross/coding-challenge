@@ -117,6 +117,7 @@ class Dao {
     $query = $conn->prepare("SELECT * FROM $table_name");
     $query->execute();
     $result = $query->fetch();
+    return $results; 
   }
 }
 ?>

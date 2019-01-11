@@ -7,10 +7,8 @@
       $_SESSION['logged_in'] = true;
 
     require_once 'Dao.php';
-    echo $_SESSION['user_ID'];
-    $user_ID = $_SESSION['user_ID'];
     $dao = new Dao();
-    $results = $dao->displayEmployees();  
+    $results = $dao->displayEmployees($_SESSION['user_ID']);  
     echo $results; 
     ?>
 
