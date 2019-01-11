@@ -116,7 +116,7 @@ class Dao {
     $conn = $this->getConnection(); 
     $query = $conn->prepare("SELECT employeeID, lastName, firstName FROM $table_name");
     $query->execute();
-    $result = $query->fetch();
+    $result = $query->fetchAll();
     return $result; 
   }
 }
