@@ -112,7 +112,6 @@ class Dao {
   }
 
   public function displayEmployees($user_ID){
-    echo 'made it into dao'; 
     $table_name = $this->employee.$user_ID;
     $conn = $this->getConnection(); 
     $query = $conn->prepare("SELECT * FROM $table_name");

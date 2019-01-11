@@ -6,12 +6,10 @@
       }
       $_SESSION['logged_in'] = true;
 
-      /*
     require_once 'Dao.php';
     $dao = new Dao();
     $results = $dao->displayEmployees($_SESSION['user_ID']);  
     echo $results; 
-    */
     ?>
 
 
