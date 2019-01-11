@@ -9,13 +9,6 @@
     require_once 'Dao.php';
     $dao = new Dao();
     $results = $dao->displayEmployees($_SESSION['user_ID']);  
-    for($x = 0; $x < sizeof($results); $x++){
-        $employee_ID = $results[$x][0]; 
-        echo "Last Name: ".$results[$x][1];
-        echo " First Name: ".$results[$x][2];
-        echo " <a href=\"edit_employee.php?a=".$employee_ID."\">edit</a>";
-        echo " <a href=\"delete_employee_handler.php?a=".$employee_ID."\">delete</a><br>";
-    }
     ?>
 
 
@@ -25,6 +18,23 @@
     <header><title>Paylocity Coding Challenge</title></header>
     <h1><a href="index.php">Coding Challenge</a></h1> 
     <body>
-
+        Employees
+        <table style="width:100%">
+            <tr>
+                <th>Last Name</th>
+                <th>First Name</th> 
+                <th> </th>
+            </tr>
+            <?php
+                for($x = 0; $x < sizeof($results); $x++){
+                    $employee_ID = $results[$x][0]; 
+                    echo "<tr>";
+                    echo "<td>".$results[$x][1]."</td";
+                    echo "<td>".$results[$x][2]."</td";
+                    echo "<td> <a href=\"edit_employee.php?a=".$employee_ID."\">edit</a>";
+                    echo " <a href=\"delete_employee_handler.php?a=".$employee_ID."\">delete</a></td>";
+                }
+            ?>
+        </table>     
     </body> 
 </html>
