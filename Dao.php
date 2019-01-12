@@ -44,12 +44,10 @@ class Dao {
   private function createUserTables($email){
     $ID = $this->getID($email);
     $table_name = $this->employee.$ID; 
-    echo $table_name; 
     $conn = $this->getConnection();
     $query = $conn->prepare("CREATE TABLE $table_name (employeeID int NOT NULL AUTO_INCREMENT, lastName varchar(255), firstName varchar(255), paycheck int, dependents int, deduction int, totalDeduction int, PRIMARY KEY (employeeID))");
     $query->execute();
-    $dependent = 'dependent';
-    $table_name = $dependent.$ID; 
+    $table_name = $this->dependent.$ID; 
     $query = $conn->prepare("CREATE TABLE $table_name (employeeID int, lastName varchar(255), firstName varchar(255), deduction int)");
     $query->execute();
     return $ID; 
