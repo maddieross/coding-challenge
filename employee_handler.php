@@ -6,6 +6,7 @@ $last_name = $_POST['last_name'];
 $paycheck = $_POST['paycheck'];
 $num_dependents = $_POST['dependents'];
 $user_ID = $_SESSION['user_ID'];
+echo $user_ID; 
 
 require_once 'Dao.php';
 $dao = new Dao();
