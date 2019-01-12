@@ -20,7 +20,7 @@ if($dependents != 0){
     exit;
 }
 
-header('Location: employees.php.php');
+header('Location: employees.php');
 exit;
 
 
