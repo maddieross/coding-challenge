@@ -61,7 +61,7 @@ class Dao {
     $query = $conn->prepare("SELECT ID FROM users WHERE email = '$email'");
     $query->execute();
     $ID = $query->fetchAll();
-    echo $ID[1]; 
+    echo $ID; 
     return $ID[0]; 
   }
 
