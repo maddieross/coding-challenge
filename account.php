@@ -18,6 +18,7 @@
             echo $_SESSION['messages'];
             }
             unset($_SESSION['messages']);
+            
         ?>
 
        

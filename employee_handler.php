@@ -4,17 +4,17 @@ session_start();
 $first_name = $_POST['first_name'];
 $last_name = $_POST['last_name'];
 $paycheck = $_POST['paycheck'];
-$num_dependents = $_POST['dependents'];
-$user_ID = $_SESSION['user_ID'];
-echo $user_ID; 
+$dependents = $_POST['dependents'];
+$ID = $_SESSION['ID'];
+
 
 require_once 'Dao.php';
 $dao = new Dao();
-$employee_ID = $dao->newEmployee($user_ID, $first_name, $last_name, $paycheck, $dependents);  
+$employee_ID = $dao->newEmployee($ID, $first_name, $last_name, $paycheck, $dependents);  
 
-if($num_dependents != 0){
+if($dependents != 0){
     $_SESSION['employee_ID'] = $results; 
-    $_SESSION['num_dependents'] = $num_dependents; 
+    $_SESSION['dependents'] = $dependents; 
     header('Location: dependent.php');
     exit;
 }
