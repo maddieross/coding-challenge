@@ -43,7 +43,6 @@ class Dao {
 
   private function createUserTables($email){
     $ID = $this->getID($email);
-    /*
     $table_name = $employee.$ID; 
     $conn = $this->getConnection();
     $query = $conn->prepare("CREATE TABLE $table_name (employeeID int NOT NULL AUTO_INCREMENT, lastName varchar(255), firstName varchar(255), paycheck int, dependents int, deduction int, totalDeduction int, PRIMARY KEY (employeeID))");
@@ -52,17 +51,14 @@ class Dao {
     $table_name = $dependent.$ID; 
     $query = $conn->prepare("CREATE TABLE $table_name (employeeID int, lastName varchar(255), firstName varchar(255), deduction int)");
     $query->execute();
-    */
     return $ID; 
   }
 
   private function getID($email){
-    echo $email;
     $conn = $this->getConnection();
     $query = $conn->prepare("SELECT ID FROM users WHERE email = '$email'");
     $query->execute();
     $ID = $query->fetch();
-    echo $ID[0]; 
     return $ID[0]; 
   }
 
