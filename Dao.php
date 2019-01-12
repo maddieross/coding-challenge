@@ -59,7 +59,7 @@ class Dao {
     $query = $conn->prepare("SELECT ID FROM users WHERE email = '$email'");
     $query->execute();
     $ID = $query->fetch();
-    return $ID; 
+    return $ID[0]; 
   }
 
   public function loginIn($email, $password){
