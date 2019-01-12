@@ -71,11 +71,9 @@ class Dao {
 
   public function newEmployee($ID, $first_name, $last_name, $paycheck, $dependents){
     $table_name = $this->employee.$ID;
-    $employee_ID = $this->createEmployeeID($table_name); 
     $deduction = $this->getDeduction('true', $first_name); 
     $conn = $this->getConnection(); 
-    echo $table_name;
-    $query = $conn->prepare("INSERT INTO $table_name (lastName, firstName, paycheck, dependents, deduction, totalDeduction) VALUES ('$last_name', '$first_name', '$paycheck', '$dependents', '$deduction', '$deduction' )");
+    $query = $conn->prepare("INSERT INTO $table_name (lastName, firstName, paycheck, dependents, deduction, totalDeduction) VALUES ('$last_name', '$first_name', '$paycheck', '$dependents', '$deduction', '$deduction')");
     $query->execute();
     return $employee_ID; 
   }
