@@ -57,6 +57,7 @@ class Dao {
   }
 
   private function getID($email){
+    echo $email;
     $conn = $this->getConnection();
     $query = $conn->prepare("SELECT ID FROM users WHERE email = '$email'");
     $query->execute();
