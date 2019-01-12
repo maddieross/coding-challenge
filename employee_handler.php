@@ -13,8 +13,9 @@ require_once 'Dao.php';
 $dao = new Dao();
 $employee_ID = $dao->newEmployee($ID, $first_name, $last_name, $paycheck, $dependents);  
 
+
 if($dependents != 0){
-    $_SESSION['employee_ID'] = $results; 
+    $_SESSION['employee_ID'] = $employee_ID; 
     $_SESSION['dependents'] = $dependents; 
     header('Location: dependent.php');
     exit;
