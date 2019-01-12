@@ -20,11 +20,11 @@
             unset($_SESSION['messages']);
         ?>
 
-        <a href="benefit.php">preview of cost</a> <br>
+        
         <a href="add_employee.php">add an employee</a> <br>
         <a href="employees.php">edit employee list</a> <br>
         <a href="edit_account.php">change account settings</a> <br>
-        <a href="logout_handler.php">Logout</a>
+        <a href="logout_handler.php">logout</a>
         
 
             
