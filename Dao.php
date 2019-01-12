@@ -117,9 +117,10 @@ class Dao {
     $query = $conn->prepare("SELECT SUM(deduction) FROM $table_name");
     $query->execute();
     $dependent_result = $query->fetch();
+  
     //get employee deduction 
     $table_name = $this->employee.$ID;
-    $query = $conn->prepare("SELECT deduction FROM $table_name WHERE employeeID='$employeeID");
+    $query = $conn->prepare("SELECT deduction FROM $table_name WHERE employeeID='$employeeID'");
     $query->execute();
     $employee_result = $query->fetch();
     //update total deduction
