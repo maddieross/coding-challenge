@@ -75,7 +75,18 @@ class Dao {
     $conn = $this->getConnection(); 
     $query = $conn->prepare("INSERT INTO $table_name (lastName, firstName, paycheck, dependents, deduction, totalDeduction) VALUES ('$last_name', '$first_name', '$paycheck', '$dependents', '$deduction', '$deduction')");
     $query->execute();
+    $employee_ID = $this->getEmployeeID($ID);
     return $employee_ID; 
+  }
+
+  private function getEmployeeID($ID){
+    $table_name = $this->employee.$ID;
+    $conn = $this->getConnection(); 
+    //MAX will return the last entered employee
+    $query = $conn->prepare("SELECT MAX(employeeID) FROM $table_name");
+    $query->execute();
+    $result = $query->fetch();
+    return $result[0]; 
   }
 
   private function getDeduction($boolean, $first_name){
