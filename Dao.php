@@ -28,8 +28,8 @@ class Dao {
         $conn = $this->getConnection();
         $query = $conn->prepare("INSERT INTO users (company, email, pw) VALUES ('$name', '$email', '$password')");
         $query->execute();
-        $ID = $this->createUserTables($email); 
-        return $ID; 
+        //$ID = $this->createUserTables($email); 
+        return '1'; 
     } 
   }
 
