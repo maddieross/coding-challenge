@@ -29,7 +29,7 @@
             </div> 
             
             <div class="signup">
-                Sigh Up
+                Sign Up
                 <form method="post" action="signup_handler.php">
                     <label for="login">Company Name:</label><br>
                     <input type="text" id="name" name="name" placeholder="name"><br>
