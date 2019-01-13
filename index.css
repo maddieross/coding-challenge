@@ -1,11 +1,19 @@
-.login, .signup{
-    width:100px;
-    height:100px;
-    margin-right:200px;
-    float:left;
-}
-.center{
+.center {
+    width: 300px;
+    height: 100px;
     position: absolute;
-    width: 50%;
-    margin: 0 auto;
-}
+    left: 50%;
+    top: 50%;
+    margin-left: -150px; /* Half of width */
+    margin-top: -50px;    /* Half of height */
+ }
+ 
+ .login {
+    float: left;
+    width: 150px;
+ }
+ 
+ .signup {
+    float: right;
+    width: 150px;
+ }
