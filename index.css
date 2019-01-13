@@ -5,6 +5,8 @@
     float:left;
 }
 .center{
-    width: 55%;
-    margin: 0 auto;
+position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
 }
