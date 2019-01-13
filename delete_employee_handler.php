@@ -1,5 +1,6 @@
 <?php
     session_start();
-    echo $_SERVER['QUERY_STRING'];
+    echo $_GET["a"];
+
     
 ?>
