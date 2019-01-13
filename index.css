@@ -1,4 +1,6 @@
-
+.center {
+    text-align: center;
+ }
  
  .login {
     float: left;
