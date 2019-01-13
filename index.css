@@ -3,12 +3,13 @@
  }
  
  .login {
-   
+    display: inline-block;
     width: 150px;
     padding: 25px;
  }
  
  .signup {
+    display: inline-block;
     width: 150px;
     padding: 25px;
  }
