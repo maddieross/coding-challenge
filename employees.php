@@ -9,7 +9,8 @@
     require_once 'Dao.php';
     $dao = new Dao();
     $results = $dao->displayEmployees($ID);  
-    ?>
+    echo $results;
+?>
 
 
 <html>

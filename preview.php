@@ -8,7 +8,6 @@
       require_once 'Dao.php';
       $dao = new Dao();
       $results = $dao->previewOfCost($_SESSION['ID']); 
-      echo $results;
 ?>
 
 <html>
