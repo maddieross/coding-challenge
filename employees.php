@@ -24,6 +24,7 @@
             unset($_SESSION['messages']);
             
         ?>
+        <br>
         Employees
         <table style="width:100%">
             <tr>
