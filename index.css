@@ -11,9 +11,11 @@
  .login {
     float: left;
     width: 150px;
+    padding: 25px;
  }
  
  .signup {
     float: right;
     width: 150px;
+    padding: 25px;
  }
