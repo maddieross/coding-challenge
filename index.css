@@ -1,8 +1,4 @@
 .login, .signup{
-    position: absolute;
-    left: 0;
-    width:100px;
-    height:100px;
-    margin-right:200px;
-    float:left;
+    width: 70%;
+    margin: 0 auto;
 }
