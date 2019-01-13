@@ -1,6 +1,6 @@
 <?php
     session_start();
-    echo $_GET["a"];
-
-    
+    require_once 'Dao.php';
+    $dao = new Dao();
+    $dao->deleteEmployee($_SESSION['ID'], $_GET["a"]);
 ?>
