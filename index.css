@@ -4,7 +4,7 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-left: 33%; /* Half of width */
+    margin-left: 20%; /* Half of width */
  }
  
  .login {
