@@ -17,6 +17,13 @@
     <header><title>Paylocity Coding Challenge</title></header>
     <h1><a href="index.php">Coding Challenge</a></h1> 
     <body>
+        <?php
+            if (isset($_SESSION['messages'])) {
+            echo $_SESSION['messages'];
+            }
+            unset($_SESSION['messages']);
+            
+        ?>
         Employees
         <table style="width:100%">
             <tr>
