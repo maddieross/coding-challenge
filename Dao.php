@@ -122,6 +122,7 @@ class Dao {
     $query = $conn->prepare("SELECT deduction FROM $table_name WHERE employeeID='$employeeID'");
     $query->execute();
     $employee_result = $query->fetch();
+    echo $employee_ID;
     //update total deduction
     $deduction =  $dependent_result[0] + $employee_result[0];
     $query = $conn->prepare("UPDATE $table_name SET totalDeduction='$deduction' WHERE employeeID='$employee_ID'");
