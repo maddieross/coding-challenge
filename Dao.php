@@ -128,12 +128,13 @@ class Dao {
     $query->execute();
   }
 
-  public function getTotalBenDeduction($ID){
+  public function previewOfCost($ID){
     $table_name = $this->employee.$ID;
-    $query = $conn->prepare("SELECT SUM(totalDeduction) FROM $table_name");
+    $conn = $this->getConnection(); 
+    $query = $conn->prepare("SELECT lastName, firstName, paycheck, totalDeduction FROM $table_name");
     $query->execute();
-    $result = $query->fetch();
-    return $result;
+    $result = $query->fetchAll();
+    return $result; 
   }
 
   public function displayEmployees($ID){
