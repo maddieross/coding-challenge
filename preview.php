@@ -5,6 +5,10 @@
         exit;
       }
       $_SESSION['logged_in'] = true;
+      require_once 'Dao.php';
+      $dao = new Dao();
+      $results = $dao->previewOfCost($_SESSION['ID']); 
+      echo $results;
 ?>
 
 <html>
@@ -19,7 +23,7 @@
                     <th>Last Name</th>
                     <th>First Name</th> 
                     <th>Paycheck</th>
-                    <th>Total Benefit Deducted</th>
+                    <th>Total Benefits Deducted</th>
                     <th>Amount Deducted per Paycheck</th>
                     <th>Paycheck Before Taxes</th>
                 </tr>
