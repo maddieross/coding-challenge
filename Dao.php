@@ -113,6 +113,7 @@ class Dao {
   public function updateBenDeduction($ID, $employee_ID){
     //get total dependent deduction
     $table_name = $this->dependent.$ID;
+    echo $table_name;
     $conn = $this->getConnection(); 
     $query = $conn->prepare("SELECT SUM(deduction) FROM $table_name");
     $query->execute();
