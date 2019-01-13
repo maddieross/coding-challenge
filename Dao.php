@@ -145,5 +145,16 @@ class Dao {
     $result = $query->fetchAll();
     return $result; 
   }
+
+  public function deleteEmployee($ID, $employee_ID){
+    $table_name = $this->employee.$ID;
+    $conn = $this->getConnection(); 
+    $query = $conn->prepare("DELETE FROM $table_name WHERE employeeID='$employee_ID'");
+    $query->execute();
+    $table_name = $this->dependent.$ID;
+    $conn = $this->getConnection(); 
+    $query = $conn->prepare("DELETE FROM $table_name WHERE employeeID='$employee_ID'");
+    $query->execute();
+  }
 }
 ?>
