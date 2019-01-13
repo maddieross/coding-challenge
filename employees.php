@@ -5,12 +5,11 @@
         exit;
       }
       $_SESSION['logged_in'] = true;
-
+    echo 'here';  
     require_once 'Dao.php';
     $dao = new Dao();
     $results = $dao->displayEmployees($ID);  
-    echo $results;
-?>
+    ?>
 
 
 <html>
