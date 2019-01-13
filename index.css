@@ -5,7 +5,6 @@
     left: 50%;
     top: 50%;
     margin-left: 33%; /* Half of width */
-    margin-top: -50px;    /* Half of height */
  }
  
  .login {
