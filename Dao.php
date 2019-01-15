@@ -169,5 +169,15 @@ class Dao {
     $query->execute();
   }
 
+  public function deleteAccount($ID){
+    $conn = $this->getConnection(); 
+    $query = $conn->prepare("DELETE FROM users WHERE ID='$ID'");
+    $query->execute();
+    $query = $conn->prepare("DROP DATABASE $this->employee.$ID");
+    $query->execute();
+    $query = $conn->prepare("DROP DATABASE $this->dependent.$ID");
+    $query->execute();
+  }
+
 }
 ?>
