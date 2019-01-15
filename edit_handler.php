@@ -47,12 +47,13 @@ if($_POST['email']){
         exit;
     }
     $dao->updateEmail($_SESSION['ID'], $email); 
+    $_SESSION['email'] = $email; 
 }
 
 
 $messages = "account information updated successfully";
 $_SESSION['messages'] = $messages;
-$_SESSION['email'] = $email; 
+
 header('Location: account.php');
 exit; 
 
