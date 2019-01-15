@@ -2,7 +2,7 @@ h1 {
    font-family: 'Thasadith', sans-serif;
 }
 
-h1 a {
+h1 a:link {
    background-color: #f1f1f1;
 }
 
@@ -42,13 +42,13 @@ ul {
  
  li a {
    display: block;
-   color: #000;
+   color:#c41230;
    padding: 8px 16px;
    text-decoration: none;
  }
  
  li a.active {
-   background-color: #4CAF50;
+   background-color: #f8880d;
    color: white;
  }
  
