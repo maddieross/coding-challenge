@@ -24,7 +24,7 @@ if(!$results){
     exit;
 }
 
-if(!$_POST['new_password']){
+if($_POST['new_password']){
     $new_password = $_POST['new_password'];
     if($new_password != $_POST['new_password_check']){
     $messages = "new passwords do not match";
@@ -37,8 +37,8 @@ if(!$_POST['new_password']){
 }
 
 
-if(!$_POST['email']){
-    echo 'here';
+if($_POST['email']){
+    
     $email = $_POST['email']; 
     //Validate Email 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
