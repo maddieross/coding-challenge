@@ -3,7 +3,6 @@
     require_once 'Dao.php';
     $dao = new Dao();
     $employee_info = $dao->employeeInfo($_SESSION['ID'], $_GET["a"]);
-    echo $employee_info[0][0];
     $dependent_info = $dao->dependentInfo($_SESSION['ID'], $_GET["a"]);
     $employee_ID = $employee_info[0]; 
 ?>
@@ -24,8 +23,8 @@
             <h3>Employee Information</h3>
             <?php
                 echo $employee_info[1].", ".$employee_info[2];
-                echo "<br> paycheck: ".$result[3];
-                echo "<br> total deduction of benefits: ".$result[6];
+                echo "<br> paycheck: ".$employee_info[3];
+                echo "<br> total deduction of benefits: ".$employee_info[6];
             ?>    
             <table>
                 <tr>
