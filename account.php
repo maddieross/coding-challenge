@@ -14,6 +14,7 @@
     <h1><a href="index.php">Coding Challenge</a></h1> 
     <body>
         <ul>
+            <li><a href="account.php">account</a></li>
             <li><a href="preview.php">preview of benefit deduction</a></li>
             <li><a href="employees.php">edit employee list</a></li>
             <li><a href="add_employee.php">add an employee</a></li>
@@ -28,6 +29,7 @@
                 echo 'Welcome '.$_SESSION['name']; 
                 echo '<br> Email: '.$_SESSION['email']; 
             ?>
+            <br>
             <a href="edit_account.php">edit account</a>
         </div>    
             
