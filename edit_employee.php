@@ -20,11 +20,18 @@
         </ul>
         <div class="main">
             <h1>Coding Challenge</h1> 
+            <?php
+                if (isset($_SESSION['messages'])) {
+                echo $_SESSION['messages'];
+                }
+                unset($_SESSION['messages']);
+                
+            ?>
             <h3>Employee Information</h3>
             <?php
                 echo $employee_info[1].", ".$employee_info[2];
-                echo "<br> paycheck: ".$employee_info[3];
-                echo "<br> total deduction of benefits: ".$employee_info[6];
+                echo "<br> Paycheck before taxes: ".$employee_info[3];
+                echo "<br> Amount deducted for benefits: ".$employee_info[6];
             ?>    
             <table>
                 <tr>
@@ -37,7 +44,7 @@
                         echo "<tr>";
                         echo "<td>".$dependent_info[$x][0]."</td>";
                         echo "<td>".$dependent_info[$x][1]."</td>";
-                        echo "<td><a href=\"delete_dependent_handler.php?a=".$employee_ID."\">delete</a></td>";
+                        echo "<td><a href=\"delete_dependent_handler.php?a=".$employee_ID.",b=".$dependent_info[$x][1]."\">delete</a></td>";
                         echo "</tr>";
                     }
                 ?>

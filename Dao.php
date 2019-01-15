@@ -175,6 +175,13 @@ class Dao {
     $query->execute();
   }
 
+  public function deleteDependent($ID, $employee_ID, $first_name){
+    $table_name = $this->dependent.$ID;
+    $conn = $this->getConnection(); 
+    $query = $conn->prepare("DELETE FROM $table_name WHERE employeeID='$employee_ID' AND firstName='$firs_name'");
+    $query->execute();
+  }
+
   public function updateEmail($ID, $email){
     $conn = $this->getConnection(); 
     $query = $conn->prepare("UPDATE users SET email='$email' WHERE ID='$ID'");
