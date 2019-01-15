@@ -63,7 +63,7 @@ class Dao {
 
   public function loginIn($email, $password){
     $conn = $this->getConnection();
-    $query = $conn->prepare("SELECT ID, company FROM users WHERE email='$email' AND pw='$password'");
+    $query = $conn->prepare("SELECT ID, company, email FROM users WHERE email='$email' AND pw='$password'");
     $query->execute();
     $results = $query->fetch();
     return $results; 

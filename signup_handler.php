@@ -70,6 +70,7 @@ $_SESSION['messages'] = $messages;
 $_SESSION['logged_in'] = true;
 $_SESSION['ID'] = $results;
 $_SESSION['name'] = $name;
+$_SESSION['email'] = $email; 
 header('Location: account.php');
 exit; 
 
