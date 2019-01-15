@@ -156,5 +156,18 @@ class Dao {
     $query = $conn->prepare("DELETE FROM $table_name WHERE employeeID='$employee_ID'");
     $query->execute();
   }
+
+  public function updateEmail($ID, $email){
+    $conn = $this->getConnection(); 
+    $query = $conn->prepare("UPDATE users SET email='$email' WHERE ID='$ID'");
+    $query->execute();
+  }
+
+  public function updatePassword($ID, $password){
+    $conn = $this->getConnection(); 
+    $query = $conn->prepare("UPDATE users SET pw='$password' WHERE ID='$ID'");
+    $query->execute();
+  }
+
 }
 ?>
