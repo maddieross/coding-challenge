@@ -58,9 +58,31 @@ ul {
  }
 
 /* page text */
-.main, .employee, .dependent {
+.main {
    margin-left:25%;
    padding:1px 16px;
 }
+
+table {
+  width: 100%;
+}
+
+th {
+  height: 50px;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
+
+
 
  
