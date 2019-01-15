@@ -151,7 +151,7 @@ class Dao {
     $conn = $this->getConnection(); 
     $query = $conn->prepare("SELECT * FROM $table_name WHERE employeeID ='$employee_ID'");
     $query->execute();
-    $result = $query->fetchAll();
+    $result = $query->fetch();
     return $result; 
   }
 
