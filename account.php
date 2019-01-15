@@ -26,7 +26,7 @@
                 echo $_SESSION['messages'].'<br>';
                 }
                 unset($_SESSION['messages']);
-                echo 'Welcome '.$_SESSION['name']; 
+                echo '<h3>Welcome '.$_SESSION['name'].'</h3>'; 
                 echo '<br> Email: '.$_SESSION['email']; 
             ?>
             <br>

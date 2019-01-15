@@ -24,7 +24,7 @@
         </ul>
         <div class="main">
             <h1><a href="index.php">Coding Challenge</a></h1> 
-            Preview of Cost
+            <h3>Preview of Cost</h3>
             <table>
                 <tr>
                     <th>Last Name</th>

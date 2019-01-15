@@ -21,7 +21,7 @@
         </ul>
         <div class="main">
             <h1><a href="index.php">Coding Challenge</a></h1> 
-            Dependent Information
+            <h3>Dependent Information</h3>
             <form method="post" action="dependent_handler.php">
                 <label for="first_name">First Name:</label><br>
                 <input type="text" id="first_name" name="first_name" placeholder="first name"><br>
