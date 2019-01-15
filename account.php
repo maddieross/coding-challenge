@@ -19,15 +19,17 @@
             <li><a href="add_employee.php">add an employee</a></li>
             <li><a href="logout_handler.php">logout</a></li>
         </ul>
-        <?php
-            if (isset($_SESSION['messages'])) {
-            echo $_SESSION['messages'].'<br>';
-            }
-            unset($_SESSION['messages']);
-            echo 'Welcome '.$_SESSION['name']; 
+        <div class="main">
+            <?php
+                if (isset($_SESSION['messages'])) {
+                echo $_SESSION['messages'].'<br>';
+                }
+                unset($_SESSION['messages']);   
+            ?>
+            Welcome
+            <?php echo 'Welcome '.$_SESSION['name']; ?>
+        </div>    
             
-        ?>
-        
         
         
 
