@@ -11,13 +11,12 @@
     <link href="index.css" type="text/css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <header><title>Paylocity Coding Challenge</title></header>
-    <h1><a href="index.php">Coding Challenge</a></h1> 
     <body>
         <ul>
             <li><a class="active" href="account.php">account</a></li>
             <li><a href="preview.php">preview of benefit deduction</a></li>
-            <li><a href="employees.php">edit employee list</a></li>
             <li><a href="add_employee.php">add an employee</a></li>
+            <li><a href="employees.php">edit employee list</a></li>
             <li><a href="logout_handler.php">logout</a></li>
         </ul>
         <div class="main">
