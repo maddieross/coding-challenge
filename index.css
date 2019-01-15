@@ -1,10 +1,11 @@
 h1 {
    font-family: 'Thasadith', sans-serif;
-   padding: none; 
+   margin 0; 
 }
 
 h1 a {
    background-color: #f1f1f1;
+   width: 25%;
    color:#c41230;
    text-decoration: none;
 }
