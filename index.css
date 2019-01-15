@@ -1,18 +1,12 @@
 h1 {
    font-family: 'Thasadith', sans-serif;
    margin: 0; 
-   background-color: #f1f1f1;
-   position: fixed;
 }
 
 h1 a {
    width: 25%;
    color:#c41230;
    text-decoration: none;
-}
-
-.index {
-  background-color: white;
 }
 
 /* css for index page*/
