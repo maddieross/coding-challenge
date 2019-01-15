@@ -3,7 +3,7 @@
     require_once 'Dao.php';
     $dao = new Dao();
     $employee_info = $dao->employeeInfo($_SESSION['ID'], $_GET["a"]);
-    echo $employee_info; 
+    echo $employee_info[0][0]; 
     $dependent_info = $dao->dependentInfo($_SESSION['ID'], $_GET["a"]);
     $employee_ID = $employee_info[0]; 
 ?>
