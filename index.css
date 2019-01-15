@@ -1,8 +1,14 @@
 h1 {
    font-family: 'Shadows Into Light', cursive;
 }
+
 h1 a {
    text-decoration: none;
+}
+
+h1 a:hover {
+   background-color: rgb(92, 83, 83);
+   color: black;
 }
 .center {
     text-align: center;
