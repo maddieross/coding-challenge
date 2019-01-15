@@ -41,8 +41,8 @@
                         echo "<td>".$results[$x][1]."</td>";
                         echo "<td>".$results[$x][2]."</td>";
                         echo "<td>".$results[$x][3]."</td>";
-                        echo "<td>".($results[$x][3]/26)."</td>";
-                        echo "<td>".(($results[$x][2])-($results[$x][3]/26))."</td>";
+                        echo "<td>".round($results[$x][3]/26,2)."</td>";
+                        echo "<td>".round((($results[$x][2])-($results[$x][3]/26)),2)."</td>";
                         echo "</tr>";
                     }
                 ?>
