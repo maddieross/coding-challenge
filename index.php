@@ -1,10 +1,3 @@
-<?php
-    session_start();
-	if (isset($_SESSION['logged_in']) || $_SESSION['logged_in']) {
-        header('Location: account.php');
-        exit;
-    }
- ?>
 <html>
     <link href="index.css" type="text/css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
