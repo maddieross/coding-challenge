@@ -20,6 +20,7 @@
             <li><a href="logout_handler.php">logout</a></li>
         </ul>
         <div class="main">
+            <h1><a href="index.php">Coding Challenge</a></h1> 
             <?php
                 if (isset($_SESSION['messages'])) {
                 echo $_SESSION['messages'].'<br>';
