@@ -29,8 +29,8 @@
                 <tr>
                     <th>Last Name</th>
                     <th>First Name</th> 
+                    <th>Total Benefit Deduction</th>
                     <th>Paycheck</th>
-                    <th>Total Benefits Deducted</th>
                     <th>Amount Deducted per Paycheck</th>
                     <th>Paycheck Before Taxes</th>
                 </tr>
@@ -39,8 +39,8 @@
                         echo "<tr>";
                         echo "<td>".$results[$x][0]."</td>";
                         echo "<td>".$results[$x][1]."</td>";
-                        echo "<td>".$results[$x][2]."</td>";
                         echo "<td>".$results[$x][3]."</td>";
+                        echo "<td>".$results[$x][2]."</td>";
                         echo "<td>".round($results[$x][3]/26,2)."</td>";
                         echo "<td>".round((($results[$x][2])-($results[$x][3]/26)),2)."</td>";
                         echo "</tr>";
