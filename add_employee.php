@@ -20,7 +20,7 @@
             <li><a href="logout_handler.php">logout</a></li>
         </ul>    
         <div class="main">
-            <h1><a href="index.php">Coding Challenge</a></h1> 
+            <h1>Coding Challenge</h1> 
             <h3>Employee Information</h3>
                 <form method="post" action="employee_handler.php">
                     <label for="first_name">First Name:</label><br>

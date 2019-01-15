@@ -146,6 +146,24 @@ class Dao {
     return $result; 
   }
 
+  public function employeeInfo($ID, $employee_ID){
+    $table_name = $this->employee.$ID;
+    $conn = $this->getConnection(); 
+    $query = $conn->prepare("SELECT * FROM $table_name WHERE employeeID ='$employee_ID'");
+    $query->execute();
+    $result = $query->fetchAll();
+    return $result; 
+  }
+
+  public function dependentInfo($ID, $employee_ID){
+    $table_name = $this->dependent.$ID;
+    $conn = $this->getConnection(); 
+    $query = $conn->prepare("SELECT * FROM $table_name WHERE employeeID ='$employee_ID'");
+    $query->execute();
+    $result = $query->fetchAll();
+    return $result; 
+  }
+
   public function deleteEmployee($ID, $employee_ID){
     $table_name = $this->employee.$ID;
     $conn = $this->getConnection(); 
