@@ -1,13 +1,12 @@
 h1 {
    font-family: 'Thasadith', sans-serif;
+   padding: none; 
 }
 
-h1 a:link {
+h1 a {
    background-color: #f1f1f1;
-}
-
-h1 a:visited {
-   color: black;
+   color:#c41230;
+   text-decoration: none;
 }
 
 /* css for index page*/
