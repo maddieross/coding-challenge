@@ -1,5 +1,8 @@
-a:link {
+h1 {
    font-family: 'Shadows Into Light', cursive;
+}
+a {
+   text-decoration: none;
 }
 .center {
     text-align: center;
