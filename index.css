@@ -9,6 +9,10 @@ h1 a {
    text-decoration: none;
 }
 
+h3 {
+  font-family: 'Thasadith', sans-serif;
+}
+
 /* css for index page*/
 .center {
     text-align: center;

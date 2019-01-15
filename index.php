@@ -19,7 +19,7 @@
         ?>
         <div class="center">
             <div class="login">
-                Login
+                <h3>Login</h3>
                 <form method="post" action="login_handler.php">
                     <label for="login">Email:</label><br>
                     <input type="text" id="login" name="login" placeholder="you@example.com"><br>
@@ -30,7 +30,7 @@
             </div> 
             
             <div class="signup">
-                Sign Up
+                <h3>Sign Up</h3>
                 <form method="post" action="signup_handler.php">
                     <label for="login">Company Name:</label><br>
                     <input type="text" id="name" name="name" placeholder="name"><br>

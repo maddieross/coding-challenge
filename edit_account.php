@@ -30,7 +30,7 @@
                 <input type="password" id="new_password" name="new_password" placeholder="password"><br>
                 <label for="password">New Password:</label><br>
                 <input type="password" id="new_password2" name="new_password2" placeholder="re-enter password"><br>
-                <input type="submit" value="Login">
+                <input type="submit" value="Update">
             </form> 
         </div>        
     </body> 
