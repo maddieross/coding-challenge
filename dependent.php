@@ -13,8 +13,15 @@
     <header><title>Paylocity Coding Challenge</title></header>
     <h1><a href="index.php">Coding Challenge</a></h1> 
     <body>
-    <div class="dependent">
-          Dependent Information
+        <ul>
+            <li><a href="account.php">account</a></li>
+            <li><a href="preview.php">preview of benefit deduction</a></li>
+            <li><a href="employees.php">edit employee list</a></li>
+            <li><a href="add_employee.php">add an employee</a></li>
+            <li><a href="logout_handler.php">logout</a></li>
+        </ul>
+        <div class="dependent">
+            Dependent Information
             <form method="post" action="dependent_handler.php">
                 <label for="first_name">First Name:</label><br>
                 <input type="text" id="first_name" name="first_name" placeholder="first name"><br>
