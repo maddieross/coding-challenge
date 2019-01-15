@@ -18,8 +18,8 @@
         <ul>
             <li><a href="account.php">account</a></li>
             <li><a class="active" href="preview.php">preview of benefit deduction</a></li>
-            <li><a href="employees.php">edit employee list</a></li>
             <li><a href="add_employee.php">add an employee</a></li>
+            <li><a href="employees.php">edit employee list</a></li>
             <li><a href="logout_handler.php">logout</a></li>
         </ul>
         <div class="main">
