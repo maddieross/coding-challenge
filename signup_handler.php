@@ -69,6 +69,7 @@ $messages = "Thanks for creating an account!";
 $_SESSION['messages'] = $messages;
 $_SESSION['logged_in'] = true;
 $_SESSION['ID'] = $results;
+$_SESSION['name'] = $name;
 header('Location: account.php');
 exit; 
 

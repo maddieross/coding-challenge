@@ -1,5 +1,5 @@
 h1 {
-   font-family: 'Shadows Into Light', cursive;
+   font-family: 'Thasadith', sans-serif;;
 }
 
 h1 a {
@@ -10,6 +10,8 @@ h1 a:hover {
    background-color: rgb(92, 83, 83);
    color: black;
 }
+
+/* css for index page*/
 .center {
     text-align: center;
  }
@@ -26,4 +28,6 @@ h1 a:hover {
    width: 150px;
    padding: 25px;
 }
+
+
  

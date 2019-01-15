@@ -15,11 +15,13 @@
     <body>
         <?php
             if (isset($_SESSION['messages'])) {
-            echo $_SESSION['messages'];
+            echo $_SESSION['messages'].'<br>';
             }
             unset($_SESSION['messages']);
+            echo 'Welcome'.$_SESSION['name']; 
             
         ?>
+        <br>
         <a href="preview.php">preview of benefit deduction</a> <br>
         <a href="employees.php">edit employee list</a> <br>
         <a href="add_employee.php">add an employee</a> <br>
