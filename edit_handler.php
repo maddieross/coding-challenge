@@ -14,7 +14,7 @@ if (empty($old_password)) {
   exit;
 }
 
-$results = $dao->loginIn($_SESSION['email'], $password);  
+$results = $dao->loginIn($_SESSION['email'], $old_password);  
 
 if(!$results){
     $messages = "OLD PASSWORD IS INCORRECT";
