@@ -24,10 +24,11 @@
                 if (isset($_SESSION['messages'])) {
                 echo $_SESSION['messages'].'<br>';
                 }
-                unset($_SESSION['messages']);   
+                unset($_SESSION['messages']);
+                echo 'Welcome '.$_SESSION['name']; 
+                echo '<br> Email: '.$_SESSION['email']; 
             ?>
-            Welcome
-            <?php echo 'Welcome '.$_SESSION['name']; ?>
+            <a href="edit_account.php">edit account</a>
         </div>    
             
         
