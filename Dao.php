@@ -158,7 +158,7 @@ class Dao {
   public function dependentInfo($ID, $employee_ID){
     $table_name = $this->dependent.$ID;
     $conn = $this->getConnection(); 
-    $query = $conn->prepare("SELECT * FROM $table_name WHERE employeeID ='$employee_ID'");
+    $query = $conn->prepare("SELECT lastName, firstName FROM $table_name WHERE employeeID ='$employee_ID'");
     $query->execute();
     $result = $query->fetchAll();
     return $result; 

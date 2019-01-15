@@ -37,7 +37,7 @@
                         echo "<tr>";
                         echo "<td>".$dependent_info[$x][0]."</td>";
                         echo "<td>".$dependent_info[$x][1]."</td>";
-                        echo " <a href=\"delete_dependent_handler.php?a=".$employee_ID."\">delete</a></td>";
+                        echo "<td><a href=\"delete_dependent_handler.php?a=".$employee_ID."\">delete</a></td>";
                         echo "</tr>";
                     }
                 ?>
