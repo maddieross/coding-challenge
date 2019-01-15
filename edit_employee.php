@@ -2,8 +2,11 @@
     session_start();
     require_once 'Dao.php';
     $dao = new Dao();
-    $employee_info = $dao->employeeInfo($_SESSION['ID'], $_GET["a"]);
-    $dependent_info = $dao->dependentInfo($_SESSION['ID'], $_GET["a"]);
+    if($_GET["a"]){
+        $_SESSION['employee_ID'] = $_GET["a"];
+    }
+    $employee_info = $dao->employeeInfo($_SESSION['ID'], $_SESSION['employee_ID']);
+    $dependent_info = $dao->dependentInfo($_SESSION['ID'], $_SESSION['employee_ID']);
     $employee_ID = $employee_info[0]; 
 ?>
 <html>
