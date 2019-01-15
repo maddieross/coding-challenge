@@ -24,9 +24,7 @@ if(!$results){
     exit;
 }
 
-echo 'here'; 
 if($_POST['new_password']){
-    echo 'pass';
     $new_password = $_POST['new_password'];
     if($new_password != $_POST['new_password_check']){
     $messages = "new passwords do not match";
@@ -35,12 +33,11 @@ if($_POST['new_password']){
     header("Location: edit_account.php");
     exit;
     }
-    updatePassword($_SESSION['ID'], $new_password); 
+    $dao->updatePassword($_SESSION['ID'], $new_password); 
 }
 
 
 if($_POST['email']){
-    echo 'email';
     $email = $_POST['email']; 
     //Validate Email 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -49,7 +46,7 @@ if($_POST['email']){
         header("Location: edit_account.php");
         exit;
     }
-    updateEmail($_SESSION['ID'], $email); 
+    $dao->updateEmail($_SESSION['ID'], $email); 
 }
 
 
