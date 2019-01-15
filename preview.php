@@ -23,8 +23,9 @@
             <li><a href="logout_handler.php">logout</a></li>
         </ul>
         <div class="main">
+            <h1><a href="index.php">Coding Challenge</a></h1> 
             Preview of Cost
-            <table style="width:100%">
+            <table>
                 <tr>
                     <th>Last Name</th>
                     <th>First Name</th> 
