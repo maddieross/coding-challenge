@@ -173,12 +173,6 @@ class Dao {
     $conn = $this->getConnection(); 
     $query = $conn->prepare("DELETE FROM users WHERE ID='$ID'");
     $query->execute();
-    $table_name = $this->employee.$ID;
-    $query = $conn->prepare("DROP DATABASE $table_name");
-    $query->execute();
-    $table_name = $this->dependent.$ID;
-    $query = $conn->prepare("DROP DATABASE $table_name");
-    $query->execute();
   }
 
 }

@@ -23,7 +23,7 @@
             <li><a href="logout_handler.php">logout</a></li>
         </ul>
         <div class="main">
-            <h1><a href="index.php">Coding Challenge</a></h1> 
+            <h1>Coding Challenge</h1> 
             <h3>Preview of Cost</h3>
             <table>
                 <tr>
