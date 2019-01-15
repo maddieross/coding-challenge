@@ -15,4 +15,9 @@ h1 a {
     height: 50px;
  }
  
+ .signup {
+   display: inline-block;
+   width: 150px;
+   padding: 25px;
+}
  
