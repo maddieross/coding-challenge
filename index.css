@@ -2,12 +2,7 @@ h1 {
    font-family: 'Thasadith', sans-serif;;
 }
 
-h1 a {
-   text-decoration: none;
-}
-
 h1 a:visited {
-   background-color: rgb(92, 83, 83);
    color: black;
 }
 
