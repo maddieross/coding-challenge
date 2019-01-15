@@ -1,5 +1,6 @@
 h1 {
-   font-family: 'Thasadith', sans-serif;;
+   font-family: 'Thasadith', sans-serif;
+   background-color: #f1f1f1;
 }
 
 h1 a:visited {
@@ -53,6 +54,11 @@ ul {
    color: white;
  }
 
-
+/* page text */
+.main {
+   margin-left:25%;
+   padding:1px 16px;
+   height:1000px;
+}
 
  
