@@ -1,5 +1,8 @@
 h1 {
    font-family: 'Thasadith', sans-serif;
+}
+
+h1 a {
    background-color: #f1f1f1;
 }
 
@@ -55,7 +58,7 @@ ul {
  }
 
 /* page text */
-.main, .employee {
+.main, .employee, .dependent {
    margin-left:25%;
    padding:1px 16px;
    height:1000px;
