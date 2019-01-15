@@ -19,8 +19,9 @@
         ?>
         <div class="center">
             <div class="login">
+                Login
                 <form method="post" action="login_handler.php">
-                    <label for="login">Login</label><br>
+                    <label for="login">Email:</label><br>
                     <input type="text" id="login" name="login" placeholder="you@example.com"><br>
                     <label for="password">Password:</label><br>
                     <input type="password" id="password" name="password" placeholder="password"><br>
