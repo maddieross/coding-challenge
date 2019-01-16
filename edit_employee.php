@@ -38,7 +38,7 @@
             ?>    
             <form method="post" action="paycheck_update.php">
                 <label for="last_name">New paycheck amount:</label>
-                <input type="number" id="paycheck" name="paycheck" placeholder="2000"><br>
+                <input type="number" id="paycheck" name="paycheck" placeholder="2000">
                 <input type="submit" value="update paycheck">
             </form> 
             <table>
