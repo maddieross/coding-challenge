@@ -32,11 +32,6 @@
             <br>
             <a href="edit_account.php">edit account</a>
             <a href="delete_account_handler.php">delete account</a>
-        </div>    
-            
-        
-        
-
-            
+        </div>   
     </body> 
 </html>
