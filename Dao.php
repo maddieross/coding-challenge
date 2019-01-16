@@ -175,6 +175,13 @@ class Dao {
     $query->execute();
   }
 
+  public function updatePaycheck($ID, $employee_ID, $paycheck){
+    $table_name = $this->employee.$ID;
+    $conn = $this->getConnection(); 
+    $query = $conn->prepare("UPDATE $table_name SET paycheck='$paycheck' WHERE employeeID='$employee_ID'");
+    $query->execute();
+  }
+
   public function deleteDependent($ID, $employee_ID, $first_name){
     $table_name = $this->dependent.$ID;
     $conn = $this->getConnection(); 

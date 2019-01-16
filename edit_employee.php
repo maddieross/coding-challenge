@@ -33,9 +33,14 @@
             <h3>Employee Information</h3>
             <?php
                 echo $employee_info[1].", ".$employee_info[2];
-                echo "<br> Paycheck before taxes: ".$employee_info[3];
                 echo "<br> Amount deducted for benefits: ".$employee_info[6];
+                echo "<br> Paycheck before taxes: ".$employee_info[3];
             ?>    
+            <form method="post" action="paycheck_update.php">
+                <label for="last_name">New paycheck amount:</label>
+                <input type="number" id="paycheck" name="paycheck" placeholder="2000"><br>
+                <input type="submit" value="update paycheck">
+            </form> 
             <table>
                 <tr>
                     <th>Last Name</th>
