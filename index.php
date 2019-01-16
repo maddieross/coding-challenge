@@ -7,12 +7,14 @@
     <header><title>Paylocity Coding Challenge</title></header>
     <h1>Coding Challenge</h1> 
     <body>
-        <?php
+        <div class="messages">
+            <?php
                 if (isset($_SESSION['messages'])) {
-                echo $_SESSION['messages'];
+                    echo $_SESSION['messages'];
                 }
-                unset($_SESSION['messages']);
+                    unset($_SESSION['messages']);
             ?>
+        </div>
         <div class="center">
             <div class="login">
                 <h3>Login</h3>

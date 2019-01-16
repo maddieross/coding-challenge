@@ -8,6 +8,9 @@ h3 {
 }
 
 /* css for index page*/
+.messages {
+  text-align: center;
+}
 .center {
     text-align: center;
  }
@@ -24,6 +27,7 @@ h3 {
    width: 150px;
    padding: 25px;
 }
+
 
 /*nav bar*/
 ul {
