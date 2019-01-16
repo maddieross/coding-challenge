@@ -18,7 +18,7 @@ if($dependents != 0){
 }
  
 $dao->updateBenDeduction($ID, $employee_ID); 
-header('Location: employees.php');
+header('Location: edit_employee.php');
 exit;
 
 ?>
