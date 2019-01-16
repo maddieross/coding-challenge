@@ -12,6 +12,14 @@ if($_SESSION['dependents']){
     $dependents = 0;
 }
 
+if (empty($first_name) || empty($last_name)) {
+    $messages = "PLEASE FILL OUT ALL TEXT BOXES";
+    $_SESSION['messages'] = $messages;
+    $valid = false;
+    header("Location: add_employee.php");
+    exit;
+}
+
 require_once 'Dao.php';
 $dao = new Dao();
 $dao->newDependent($ID, $employee_ID, $first_name, $last_name);  
