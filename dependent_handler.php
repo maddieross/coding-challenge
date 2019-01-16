@@ -11,7 +11,7 @@ require_once 'Dao.php';
 $dao = new Dao();
 $dao->newDependent($ID, $employee_ID, $first_name, $last_name);  
 
-if($dependents != 0){
+if($dependents != 0 || !$dependents){
     $_SESSION['dependents'] = $dependents; 
     header('Location: dependent.php');
     exit;
