@@ -6,7 +6,7 @@ $last_name = $_POST['last_name'];
 $ID = $_SESSION['ID'];
 $employee_ID = $_SESSION['employee_ID'];
 
-if($_SESSION['dependents']-1){
+if($_SESSION['dependents']){
     $dependents = $_SESSION['dependents']-1;
 }else{
     $dependents = 0;
@@ -21,7 +21,7 @@ if($dependents != 0){
     header('Location: dependent.php');
     exit;
 }
- 
+
 $dao->updateBenDeduction($ID, $employee_ID); 
 header('Location: edit_employee.php');
 exit;
