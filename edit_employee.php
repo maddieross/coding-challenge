@@ -51,7 +51,8 @@
                         echo "</tr>";
                     }
                 ?>
-            </table>     
+            </table> 
+            <a href="dependent.php">add dependent</a>  
         </div>   
     </body> 
 </html>
