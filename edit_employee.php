@@ -58,6 +58,7 @@
                 ?>
             </table> 
             <a href="dependent.php">add dependent</a>  
+            <a href="delete_employee_handler.php?a=".$employee_ID>delete</a>
         </div>   
     </body> 
 </html>
