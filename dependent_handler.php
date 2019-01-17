@@ -15,7 +15,7 @@ if (empty($first_name) || empty($last_name)) {
     $valid = false;
 }
 
-if($valid == false){
+if(isset($valid) && $valid == false){
     $_SESSION['messages'] = $messages;
     header("Location: dependent.php");
     exit;

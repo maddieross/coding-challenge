@@ -23,7 +23,7 @@ if(empty($paycheck)){
     $valid = false;
 }
 
-if($valid == false){
+if(isset($valid) && $valid == false){
     $_SESSION['messages'] = $messages;
     header("Location: add_employee.php");
     exit;
