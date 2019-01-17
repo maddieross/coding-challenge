@@ -6,6 +6,7 @@ $last_name = test_input($_POST['last_name']);
 $paycheck = test_input($_POST['paycheck']);
 $dependents = test_input($_POST['dependents']);
 $ID = $_SESSION['ID'];
+$x = 0;
 
 if (empty($first_name) || empty($last_name)) {
     $messages[$x] = "first or last name can not be left empty";
