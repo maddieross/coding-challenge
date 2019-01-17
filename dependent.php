@@ -22,11 +22,15 @@
         <div class="main">
             <h1>Coding Challenge</h1> 
             <?php
-                if (isset($_SESSION['messages'])) {
-                    echo $_SESSION['messages'];
-                }
-                    unset($_SESSION['messages']);
-            ?>
+               
+               if (isset($_SESSION['messages'])) {
+                   $messages = $_SESSION['messages'];
+                   for($x = 0; $x<sizeof($messages); $x++){
+                       echo $messages[$x]."<br>";
+                   }
+               }
+                   unset($_SESSION['messages']);
+           ?>
             <h3>Dependent Information</h3>
             <form method="post" action="dependent_handler.php">
                 <label for="first_name">First Name:</label><br>

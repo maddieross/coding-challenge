@@ -15,16 +15,17 @@ $_password = test_input($_POST['password_check']);
 $x = 0; 
 
 if (empty($name)) {
-  $messages[$x] = "Name must be filled";
+  $messages[$x] = "name must be filled";
   $x++; 
   $valid = false;
 }else if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-  $messages[$x] = "Only letters and white space allowed for name"; 
+  $messages[$x] = "only letters and white space allowed for name"; 
   $x++;
+  $valid = false;
 }
 
 if (empty($email)) {
-  $messages[$x] = "Email can not be left empty";
+  $messages[$x] = "email can not be left empty";
   $x++; 
   $valid = false;
 }else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
