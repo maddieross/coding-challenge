@@ -21,6 +21,12 @@
         </ul>    
         <div class="main">
             <h1>Coding Challenge</h1> 
+            <?php
+                if (isset($_SESSION['messages'])) {
+                    echo $_SESSION['messages'];
+                }
+                    unset($_SESSION['messages']);
+            ?>
             <h3>Employee Information</h3>
                 <form method="post" action="employee_handler.php">
                     <label for="first_name">First Name:</label><br>

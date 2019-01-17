@@ -14,7 +14,7 @@ $results = $dao->loginIn($email, $password);
 
 if (!$results) {
     $_SESSION['logged_in'] = false;
-    $messages = "Username or password invalid";
+    $messages = "username or password invalid";
     $_SESSION['messages'] = $messages;
     header('Location: index.php');
     exit;
