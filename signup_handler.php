@@ -4,14 +4,10 @@ session_start();
 require_once 'Dao.php';
 $dao = new Dao();
 
-
-
 $name = test_input($_POST['name']);
 $email = test_input($_POST['email']);
 $password = test_input($_POST['password']);
 $_password = test_input($_POST['password_check']);
-
-
 $x = 0; 
 
 if (empty($name)) {
@@ -55,7 +51,6 @@ $results = $dao->signup($name, $email, $password);
 
 if($results == NULL){
   $messages = "an account is already associated with the email entered";
-  $valid = false;
   $_SESSION['messages'] = $messages;
   header("Location: index.php");
   exit;
