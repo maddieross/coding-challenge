@@ -44,7 +44,7 @@ if($password != $_password){
   $valid = false;
 }
 
-if($valid == 'false'){
+if($valid == false){
   $_SESSION['messages'] = $messages;
   header("Location: index.php");
   exit;
