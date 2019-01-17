@@ -10,7 +10,8 @@
         <div class="messages">
             <?php
                 if (isset($_SESSION['messages'])) {
-                    echo $_SESSION['messages'];
+                    for($x = 0; $x>sizeof($_SESSION['messages']); $x++)
+                    echo $_SESSION['messages'][$x]."br";
                 }
                     unset($_SESSION['messages']);
             ?>
