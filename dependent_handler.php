@@ -8,7 +8,6 @@ $employee_ID = $_SESSION['employee_ID'];
 
 if (empty($first_name) || empty($last_name)) {
     $messages = "text boxes can not be left blank";
-    $_SESSION['messages'] = $messages;
     $valid = false;
 }else if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
     $messages[$x] = "only letters and white space allowed for name"; 

@@ -4,10 +4,6 @@ session_start();
 $email = $_POST['login'];
 $password = $_POST['password'];
 
-
-
-
-
 require_once 'Dao.php';
 $dao = new Dao();
 $results = $dao->loginIn($email, $password);  
