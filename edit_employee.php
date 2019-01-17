@@ -41,6 +41,7 @@
                 <input type="number" id="paycheck" name="paycheck" placeholder="2000">
                 <input type="submit" value="update paycheck">
             </form> 
+            <a href="delete_employee_handler.php">delete</a>
             <table>
                 <tr>
                     <th>Last Name</th>
@@ -58,7 +59,6 @@
                 ?>
             </table> 
             <a href="dependent.php">add dependent</a>  
-            <a href="delete_employee_handler.php">delete</a>
         </div>   
     </body> 
 </html>
