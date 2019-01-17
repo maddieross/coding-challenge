@@ -9,9 +9,12 @@
     <body>
         <div class="messages">
             <?php
+               
                 if (isset($_SESSION['messages'])) {
-                    for($x = 0; $x>sizeof($_SESSION['messages']); $x++)
-                    echo $_SESSION['messages'][$x]."br";
+                    $messages = $_SESSION['messages'];
+                    for($x = 0; $x>sizeof($messages); $x++){
+                        echo $messages[$x]."br";
+                    }
                 }
                     unset($_SESSION['messages']);
             ?>
