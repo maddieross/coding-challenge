@@ -24,6 +24,7 @@ if(isset($valid) && $valid == false){
 require_once 'Dao.php';
 $dao = new Dao();
 $dao->newDependent($ID, $employee_ID, $first_name, $last_name);  
+$dao->updateBenDeduction($ID, $employee_ID); 
 
 if($_SESSION['dependents']){
     $dependents = $_SESSION['dependents']-1;
@@ -37,7 +38,6 @@ if($dependents != 0){
     exit;
 }
 
-$dao->updateBenDeduction($ID, $employee_ID); 
 header('Location: edit_employee.php');
 exit;
 

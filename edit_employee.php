@@ -41,7 +41,7 @@
                 <input type="number" id="paycheck" name="paycheck" placeholder="2000">
                 <input type="submit" value="update paycheck">
             </form> 
-            <a href="delete_employee_handler.php">delete</a>
+            <a href="delete_employee_handler.php">delete employee</a><br>
             <table>
                 <tr>
                     <th>Last Name</th>

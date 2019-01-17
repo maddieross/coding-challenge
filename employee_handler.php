@@ -31,7 +31,7 @@ if(isset($valid) && $valid == false){
 
 require_once 'Dao.php';
 $dao = new Dao();
-$employee_ID = $dao->newEmployee($ID, $first_name, $last_name, $paycheck, $dependents);  
+$employee_ID = $dao->newEmployee($ID, $first_name, $last_name, $paycheck);  
 
 
 if($dependents && $dependents != 0 ){
