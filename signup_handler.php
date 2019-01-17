@@ -4,51 +4,47 @@ session_start();
 require_once 'Dao.php';
 $dao = new Dao();
 
-$name = $_POST['name'];
-$email = $_POST['email'];
-$password = $_POST['password'];
-$_password = $_POST['password_check'];
 
 
+$name = test_input($_POST['name']);
+$email = test_input($_POST['email']);
+$password = test_input($_POST['password']);
+$_password = test_input($_POST['password_check']);
+
+
+$x = 0; 
 
 if (empty($name)) {
-  $messages = "PLEASE FILL OUT ALL TEXT BOXES name";
-  $_SESSION['messages'] = $messages;
+  $messages[$x] = "Name must be filled";
+  $x++; 
   $valid = false;
-  header("Location: index.php");
-  exit;
+}else if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+  $messages[$x] = "Only letters and white space allowed for name"; 
+  $x++;
 }
 
 if (empty($email)) {
-  $messages = "PLEASE FILL OUT ALL TEXT BOXES email";
-  $_SESSION['messages'] = $messages;
+  $messages[$x] = "Email can not be left empty";
+  $x++; 
   $valid = false;
-  header("Location: index.php");
-  exit;
+}else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+  $messages[$x] = "email is not a valid email address";
+  $x++;
+  $valid = false;
 }
 
 if (empty($password)) {
-  $messages = "PLEASE FILL OUT ALL TEXT BOXES password";
-  $_SESSION['messages'] = $messages;
+  $messages[$x] = "password can not be left empty";
+  $x++;
   $valid = false;
-  header("Location: index.php");
-  exit;
 }
 
 if($password != $_password){
-  $messages = "passwords do not match";
-  $_SESSION['messages'] = $messages;
+  $messages[$x] = "passwords do not match";
   $valid = false;
-  header("Location: index.php");
-  exit;
 }
 
-
-//Validate Email 
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-  $messages = "email is not a valid email address";
-  $valid = false;
-  $_SESSION['sentiment'] = "bad";
+if($valid == 'false'){
   $_SESSION['messages'] = $messages;
   header("Location: index.php");
   exit;
@@ -59,7 +55,6 @@ $results = $dao->signup($name, $email, $password);
 if($results == NULL){
   $messages = "an account is already associated with the email entered";
   $valid = false;
-  $_SESSION['sentiment'] = "bad";
   $_SESSION['messages'] = $messages;
   header("Location: index.php");
   exit;
@@ -73,6 +68,13 @@ $_SESSION['name'] = $name;
 $_SESSION['email'] = $email; 
 header('Location: account.php');
 exit; 
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
 
 ?>
 
