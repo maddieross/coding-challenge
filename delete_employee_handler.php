@@ -7,7 +7,7 @@
     }else{
         $employee_ID = $_SESSION['employee_ID'];
     }
-    $dao->deleteEmployee($_SESSION['ID'], $_GET["a"]);
+    $dao->deleteEmployee($_SESSION['ID'], $employee_ID);
     $_SESSION['messages'] = 'employee successfully deleted';
     header('Location: employees.php');
     exit;
