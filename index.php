@@ -1,5 +1,9 @@
 <?php
     session_start();
+    if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
+        header('Location: account.php');
+        exit;
+      }
 ?>
 <html>
     <link href="index.css" type="text/css" rel="stylesheet" />
