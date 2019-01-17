@@ -13,7 +13,7 @@
                 if (isset($_SESSION['messages'])) {
                     $messages = $_SESSION['messages'];
                     for($x = 0; $x<sizeof($messages); $x++){
-                        echo $messages[$x]."br";
+                        echo $messages[$x]."<br>";
                     }
                 }
                     unset($_SESSION['messages']);
