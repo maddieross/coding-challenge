@@ -85,7 +85,7 @@ tr:nth-child(even) {
 
 /*footer*/
 .footer {
-  position: fixed;
+  position: relative;
   bottom: 0;
   padding: 20px;
   width: 100%;
