@@ -45,9 +45,9 @@
                     }
                 ?>
             </table>  
+            <div class="footer">
+                2019 Madeline Ross maddieross@u.boisestate.edu
+            </div>
         </div>   
-        <div class="footer">
-            2019 Madeline Ross maddieross@u.boisestate.edu
-        </div>
     </body> 
 </html>
