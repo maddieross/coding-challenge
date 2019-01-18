@@ -26,7 +26,7 @@
         <div class="main">
             <h1>Coding Challenge</h1> 
             <?php
-                echo "<h3>Preview of Cost: $".$total[0]."</h3>"
+                echo "<h3>Preview of Deduction: $".$total[0]."</h3>"
             ?>
             <table>
                 <tr>
