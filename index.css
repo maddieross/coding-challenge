@@ -88,8 +88,9 @@ tr:nth-child(even) {
   position: absolute;
   bottom: 0;
   padding: 20px;
+  width: 100%;
   text-align: center;
-  background: #ddd;
+  background: #f1f1f1;
   margin-top: 20px;
 }
 
