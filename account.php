@@ -32,6 +32,9 @@
             <br>
             <a href="edit_account.php">edit account</a>
             <a href="delete_account_handler.php">delete account</a>
-        </div>   
+        </div>  
+        <div class="footer">
+            2019 Madeline Ross maddieross@u.boisestate.edu
+        </div>
     </body> 
 </html>
