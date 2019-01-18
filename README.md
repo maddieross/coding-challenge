@@ -1,5 +1,7 @@
 Paylocity Coding Challenge
+
 Madeline Ross
+
 1/17/2019
 
 Website is hosted at https://pcodechallenge.herokuapp.com/
@@ -17,7 +19,9 @@ will display the employees in a table with the amount of benefit deduction, payc
 deducted each pay check, and the paycheck amount before taxes. 
 
 A test account has been created and populated with employees and dependents.
+
 Email: test@email.com
+
 Password: pass
 
 
