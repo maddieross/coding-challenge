@@ -27,8 +27,7 @@
             <h3>Preview of Cost</h3>
             <table>
                 <tr>
-                    <th>Last Name</th>
-                    <th>First Name</th> 
+                    <th>Name</th>
                     <th>Total Benefit Deduction</th>
                     <th>Paycheck</th>
                     <th>Amount Deducted per Paycheck</th>
@@ -37,12 +36,11 @@
                 <?php
                     for($x = 0; $x < sizeof($results); $x++){
                         echo "<tr>";
-                        echo "<td>".$results[$x][0]."</td>";
-                        echo "<td>".$results[$x][1]."</td>";
-                        echo "<td>$".$results[$x][3].".00</td>";
-                        echo "<td>$".$results[$x][2]."</td>";
-                        echo "<td>$".round($results[$x][3]/26,2)."</td>";
-                        echo "<td>$".round((($results[$x][2])-($results[$x][3]/26)),2)."</td>";
+                        echo "<td> <a href=\"edit_employee.php?a=".$result[0]."\">".$results[$x][1],$results[$x][2]."</a></td>";
+                        echo "<td>$".$results[$x][4].".00</td>";
+                        echo "<td>$".$results[$x][3]."</td>";
+                        echo "<td>$".round($results[$x][4]/26,2)."</td>";
+                        echo "<td>$".round((($results[$x][3])-($results[$x][3]/26)),2)."</td>";
                         echo "</tr>";
                     }
                 ?>
