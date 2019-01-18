@@ -187,6 +187,7 @@ class Dao {
     $conn = $this->getConnection(); 
     $query = $conn->prepare("DELETE FROM $table_name WHERE firstName='$first_name' AND employeeID='$employee_ID'");
     $query->execute();
+    updateBenDeduction($ID, $employee_ID);
   }
 
   public function updateEmail($ID, $email){
