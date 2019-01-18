@@ -1,6 +1,7 @@
 h1 {
    font-family: 'Thasadith', sans-serif;
    color:#c41230;
+   position: fixed;
 }
 
 h3 {
