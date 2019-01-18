@@ -131,6 +131,15 @@ class Dao {
   public function previewOfCost($ID){
     $table_name = $this->employee.$ID;
     $conn = $this->getConnection(); 
+    $query = $conn->prepare("SELECT SUM(totalDeduction) FROM $table_name");
+    $query->execute();
+    $result = $query->fetch();
+    return $result; 
+  }
+
+  public function total($ID){
+    $table_name = $this->employee.$ID;
+    $conn = $this->getConnection(); 
     $query = $conn->prepare("SELECT employeeID, lastName, firstName, paycheck, totalDeduction FROM $table_name");
     $query->execute();
     $result = $query->fetchAll();

@@ -7,6 +7,7 @@
       $_SESSION['logged_in'] = true;
       require_once 'Dao.php';
       $dao = new Dao();
+      $total = $dao->total($_SESSION['ID']);
       $results = $dao->previewOfCost($_SESSION['ID']); 
 ?>
 
@@ -24,7 +25,10 @@
         </ul>
         <div class="main">
             <h1>Coding Challenge</h1> 
-            <h3>Preview of Cost</h3>
+            <?php
+                echo "<h3>Preview of Cost: ".$total."</h3>"
+            ?>
+            <h3>Preview of Cost: </h3>
             <table>
                 <tr>
                     <th>Name</th>
