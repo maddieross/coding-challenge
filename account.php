@@ -14,7 +14,7 @@
     <body>
         <ul>
             <li><a class="active" href="account.php">account</a></li>
-            <li><a href="preview.php">preview of benefit deduction</a></li>
+            <li><a href="preview.php">preview</a></li>
             <li><a href="add_employee.php">add an employee</a></li>
             <li><a href="employees.php">edit employee list</a></li>
             <li><a href="logout_handler.php">logout</a></li>
