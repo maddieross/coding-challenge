@@ -36,7 +36,7 @@
                 <?php
                     for($x = 0; $x < sizeof($results); $x++){
                         echo "<tr>";
-                        echo "<td> <a href=\"edit_employee.php?a=".$result[0]."\">".$results[$x][1].", ".$results[$x][2]."</a></td>";
+                        echo "<td> <a href=\"edit_employee.php?a=".$result[$x][0]."\">".$results[$x][1].", ".$results[$x][2]."</a></td>";
                         echo "<td>$".$results[$x][4]."</td>";
                         echo "<td>$".$results[$x][3]."</td>";
                         echo "<td>$".round($results[$x][4]/26,2)."</td>";
