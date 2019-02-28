@@ -1,4 +1,4 @@
-Paylocity Coding Challenge
+Coding Challenge
 
 Madeline Ross
 
