@@ -72,7 +72,7 @@ class Dao {
 
   public function newEmployee($ID, $first_name, $last_name, $paycheck){
     $table_name = $this->employee.$ID;
-    $deduction = $this->employee_deduction 
+    $deduction = $this->employee_deduction; 
     $conn = $this->getConnection(); 
     $query = $conn->prepare("INSERT INTO $table_name (lastName, firstName, paycheck, deduction, totalDeduction) VALUES ('$last_name', '$first_name', '$paycheck', '$deduction', '$deduction')");
     $query->execute();
