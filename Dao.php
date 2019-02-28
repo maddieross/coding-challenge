@@ -1,6 +1,7 @@
 <?php
 
 class Dao {
+  //mysql://b013e8f8c4be3a:d4ba5526@us-cdbr-iron-east-01.cleardb.net/heroku_27a5636b1b521da?reconnect=true
   private $host = "us-cdbr-iron-east-01.cleardb.net";
   private $db = "heroku_27a5636b1b521da";
   private $user = "b013e8f8c4be3a";
@@ -71,7 +72,7 @@ class Dao {
 
   public function newEmployee($ID, $first_name, $last_name, $paycheck){
     $table_name = $this->employee.$ID;
-    $deduction = $this->getDeduction('true', $first_name); 
+    $deduction = $this->employee_deduction 
     $conn = $this->getConnection(); 
     $query = $conn->prepare("INSERT INTO $table_name (lastName, firstName, paycheck, deduction, totalDeduction) VALUES ('$last_name', '$first_name', '$paycheck', '$deduction', '$deduction')");
     $query->execute();
@@ -89,22 +90,9 @@ class Dao {
     return $result[0]; 
   }
 
-  private function getDeduction($boolean, $first_name){
-    if($boolean == 'true'){
-      $deduction = $this->employee_deduction; 
-    }else{
-      $deduction = $this->dependent_deduction;
-    }
-    //discount for names beginning with A
-    if($first_name[0] == 'A' || $first_name[0] == 'a'){
-        return $deduction - ($deduction*.10);
-    }
-    return $deduction; 
-  }
-
   public function newDependent($ID, $employee_ID, $first_name, $last_name){
     $table_name = $this->dependent.$ID;
-    $deduction = $this->getDeduction('false', $first_name); 
+    $deduction =  $this->$dependent_deduction; 
     $conn = $this->getConnection(); 
     $query = $conn->prepare("INSERT INTO $table_name (employeeID, lastName, firstName, deduction) VALUES ('$employee_ID', '$last_name', '$first_name', '$deduction' )");
     $query->execute();
