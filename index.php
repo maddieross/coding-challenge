@@ -8,7 +8,7 @@
 <html>
     <link href="index.css" type="text/css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <header><title>Paylocity Coding Challenge</title></header>
+    <header><title>Coding Challenge</title></header>
     <h1>Coding Challenge</h1> 
     <body>
         <div class="messages">
